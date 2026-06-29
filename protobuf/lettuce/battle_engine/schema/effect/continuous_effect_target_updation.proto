@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema.effect;
+
+import "lettuce/battle_engine/schema/battle_object_id_updation.proto";
+import "lettuce/battle_engine/schema/player_id_repeated_updation.proto";
+
+message ContinuousEffectTargetUpdation {
+  lettuce.battle_engine.schema.BattleObjectIdUpdation pokemon = 1;
+  repeated lettuce.battle_engine.schema.PlayerIdRepeatedUpdation players = 2;
+}
+
+

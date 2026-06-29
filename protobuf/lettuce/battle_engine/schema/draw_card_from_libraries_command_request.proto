@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/player_id.proto";
+
+message DrawCardFromLibrariesCommandRequest {
+  PlayerId player_id1 = 1;
+  int32 count1 = 2;
+  PlayerId player_id2 = 3;
+  int32 count2 = 4;
+}
+
+

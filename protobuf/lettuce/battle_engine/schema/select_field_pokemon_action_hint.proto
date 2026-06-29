@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/battle_object_id.proto";
+
+message SelectFieldPokemonActionHint {
+  repeated BattleObjectId candidates = 1;
+  int32 min_select_count = 2;
+  int32 max_select_count = 3;
+}
+
+

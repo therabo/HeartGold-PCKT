@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.summary.battle_logs;
+
+import "lettuce/battle_engine/schema/flip_coin_result_type.proto";
+
+message FlipCoinMultipleLog {
+  repeated lettuce.battle_engine.schema.FlipCoinResultType results = 1;
+}
+
+

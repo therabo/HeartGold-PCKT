@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/damage_amount.proto";
+import "lettuce/battle_engine/schema/extra_attack_applied_result.proto";
+
+message AttackDamageAppliedResult {
+  bool skips_main_attack = 1;
+  DamageAmount damage = 2;
+  bool is_weakness = 3;
+  bool is_resisted = 4;
+  int32 effect_delta = 5;
+  bool is_prevented = 6;
+  repeated ExtraAttackAppliedResult extra_attacks = 7;
+}
+
+

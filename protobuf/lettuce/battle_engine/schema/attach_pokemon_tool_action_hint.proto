@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/attach_pokemon_tool_candidate.proto";
+
+message AttachPokemonToolActionHint {
+  repeated AttachPokemonToolCandidate candidates = 1;
+}
+
+

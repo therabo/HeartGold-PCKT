@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/expected_action_notice_type.proto";
+import "lettuce/battle_engine/schema/notice_parameter.proto";
+
+message ExpectedActionNotice {
+  ExpectedActionNoticeType notice_type = 1;
+  repeated NoticeParameter parameters = 2;
+}
+
+

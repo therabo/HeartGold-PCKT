@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/command_request.proto";
+import "lettuce/battle_engine/schema/command_response.proto";
+import "lettuce/battle_engine/schema/hidden_command_request.proto";
+import "lettuce/battle_engine/schema/hidden_command_response.proto";
+import "lettuce/battle_engine/schema/hidden_game_updation.proto";
+
+message CommandExecutedResult {
+  HiddenGameUpdation updation = 1;
+  oneof request {
+    CommandRequest command_request = 2;
+    HiddenCommandRequest hidden_command_request = 3;
+  }
+  oneof response {
+    CommandResponse command_response = 4;
+    HiddenCommandResponse hidden_command_response = 5;
+  }
+}
+
+

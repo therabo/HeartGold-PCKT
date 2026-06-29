@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/battle_object_id.proto";
+import "lettuce/battle_engine/schema/card.proto";
+import "lettuce/battle_engine/schema/card_id.proto";
+import "lettuce/battle_engine/schema/damage_amount.proto";
+import "lettuce/battle_engine/schema/energy_set.proto";
+import "lettuce/battle_engine/schema/energy_type.proto";
+import "lettuce/battle_engine/schema/player_id.proto";
+import "lettuce/battle_engine/schema/pokemon_object_flags.proto";
+import "lettuce/battle_engine/schema/pokemon_tool_object.proto";
+
+message PokemonObject {
+  BattleObjectId id = 1;
+  PlayerId controller = 2;
+  repeated Card pokemons = 3;
+  DamageAmount damage = 4;
+  EnergySet attached_energy_set = 5;
+  bool will_knocked_out = 6;
+  int32 pokemon_played_turn_number = 7;
+  CardId will_knocked_out_from = 8;
+  PokemonObjectFlags object_flags = 9;
+  EnergyType will_knocked_out_from_attack_type = 10;
+  repeated PokemonToolObject tools = 11;
+}
+
+

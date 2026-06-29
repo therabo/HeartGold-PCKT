@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/energy_pair.proto";
+import "lettuce/battle_engine/schema/energy_pair_updation.proto";
+
+message EnergyPairRepeatedUpdation {
+  int32 index = 1;
+  oneof operation {
+    EnergyPair add = 2;
+    EnergyPairUpdation updation = 3;
+    bool removed = 4;
+  }
+}
+
+

@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+enum DamageType {
+  DAMAGE_TYPE_UNSPECIFIED = 0;
+  DAMAGE_TYPE_ATTACK = 1;
+  DAMAGE_TYPE_EXTRA_ATTACK = 2;
+  DAMAGE_TYPE_ATTACK_LOGIC = 3;
+  DAMAGE_TYPE_ABILITY = 4;
+}
+

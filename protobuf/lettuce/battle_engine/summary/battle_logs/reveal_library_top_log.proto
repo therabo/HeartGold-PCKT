@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.summary.battle_logs;
+
+message RevealLibraryTopLog {
+  int32 revealed_count = 1;
+  bool is_self = 2;
+}
+
+

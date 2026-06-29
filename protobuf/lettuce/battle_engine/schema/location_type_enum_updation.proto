@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/location_type.proto";
+
+message LocationTypeEnumUpdation {
+  LocationType value = 1;
+}
+
+

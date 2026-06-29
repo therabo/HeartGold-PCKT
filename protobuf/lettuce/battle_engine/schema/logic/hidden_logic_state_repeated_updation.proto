@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema.logic;
+
+import "lettuce/battle_engine/schema/logic/hidden_logic_state.proto";
+import "lettuce/battle_engine/schema/logic/hidden_logic_state_updation.proto";
+
+message HiddenLogicStateRepeatedUpdation {
+  int32 index = 1;
+  oneof operation {
+    HiddenLogicState add = 2;
+    HiddenLogicStateUpdation updation = 3;
+    bool removed = 4;
+  }
+}
+
+

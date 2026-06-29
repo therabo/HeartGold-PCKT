@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+enum StepState {
+  STEP_STATE_UNSPECIFIED = 0;
+  STEP_STATE_WILL_EXECUTE = 1;
+  STEP_STATE_EXECUTING = 2;
+  STEP_STATE_DID_EXECUTE = 3;
+}
+

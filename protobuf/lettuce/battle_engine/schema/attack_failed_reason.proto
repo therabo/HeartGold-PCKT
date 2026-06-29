@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+enum AttackFailedReason {
+  ATTACK_FAILED_REASON_UNSPECIFIED = 0;
+  ATTACK_FAILED_REASON_NAVIGATION_TEXT21 = 1000021;
+  ATTACK_FAILED_REASON_NAVIGATION_TEXT_DEBUG = 9999999;
+}
+

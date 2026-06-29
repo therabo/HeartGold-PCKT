@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema.effect;
+
+import "lettuce/battle_engine/schema/continuous_effect_instance_id_updation.proto";
+import "lettuce/battle_engine/schema/effect/continuous_effect_cause_updation.proto";
+import "lettuce/battle_engine/schema/effect/continuous_effect_operation_updation.proto";
+
+message ContinuousEffectUpdation {
+  ContinuousEffectOperationUpdation operation = 1;
+  ContinuousEffectCauseUpdation cause = 3;
+  lettuce.battle_engine.schema.ContinuousEffectInstanceIdUpdation instance_id = 4;
+}
+
+

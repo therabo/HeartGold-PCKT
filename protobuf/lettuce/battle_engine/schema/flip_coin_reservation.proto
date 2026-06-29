@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/flip_coin_reservation_entry.proto";
+
+message FlipCoinReservation {
+  repeated FlipCoinReservationEntry entries = 1;
+}
+
+

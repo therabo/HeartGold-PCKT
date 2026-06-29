@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/heal_result.proto";
+
+message ApplyHealDamageCommandResponse {
+  repeated HealResult results = 1;
+}
+
+

@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema.logic.impl;
+
+import "lettuce/battle_engine/schema/energy_set.proto";
+import "lettuce/battle_engine/schema/logic/impl/logic_state_common_parameter_type.proto";
+
+message LogicState_CommonParameter {
+  string key = 1;
+  LogicState_CommonParameter_Type type = 2;
+  bool bool_value = 3;
+  int64 long_value = 4;
+  string string_value = 5;
+  lettuce.battle_engine.schema.EnergySet energy_set_value = 6;
+}
+
+

@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+enum NoOperationType {
+  NO_OPERATION_TYPE_ANNOTATION = 0;
+  NO_OPERATION_TYPE_ATTACK = 1;
+}
+

@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/embodied_hand_revealment.proto";
+
+message HiddenHandRevealment {
+  bool has_public = 1;
+  EmbodiedHandRevealment public = 2;
+  int32 count = 3;
+}
+
+

@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/effect/continuous_effect.proto";
+import "lettuce/battle_engine/schema/logic_specifier.proto";
+
+message ApplyContinuousEffectCommandRequest {
+  repeated lettuce.battle_engine.schema.effect.ContinuousEffect effect = 1;
+  LogicSpecifier applier_logic = 2;
+}
+
+

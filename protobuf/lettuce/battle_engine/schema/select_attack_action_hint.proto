@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/pokemon_attack_set.proto";
+
+message SelectAttackActionHint {
+  repeated PokemonAttackSet candidates = 1;
+}
+
+

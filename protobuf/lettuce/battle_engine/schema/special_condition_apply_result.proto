@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/battle_object_id.proto";
+import "lettuce/battle_engine/schema/special_condition_apply_result_entry.proto";
+
+message SpecialConditionApplyResult {
+  BattleObjectId pokemon = 1;
+  bool is_prevented = 2;
+  repeated SpecialConditionApplyResultEntry result = 3;
+}
+
+

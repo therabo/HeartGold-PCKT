@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.summary.battle_logs;
+
+import "lettuce/battle_engine/schema/energy_type.proto";
+
+message ChangeNextEnergyTypeLog {
+  lettuce.battle_engine.schema.EnergyType before_energy_type = 1;
+  lettuce.battle_engine.schema.EnergyType after_energy_type = 2;
+}
+
+

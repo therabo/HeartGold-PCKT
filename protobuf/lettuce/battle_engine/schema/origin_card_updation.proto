@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/card_id_updation.proto";
+import "lettuce/battle_engine/schema/card_view_info_updation.proto";
+import "lettuce/battle_engine/schema/master_card_id_updation.proto";
+
+message OriginCardUpdation {
+  CardIdUpdation id = 1;
+  MasterCardIdUpdation master_card_id = 2;
+  CardViewInfoUpdation view_info = 3;
+}
+
+

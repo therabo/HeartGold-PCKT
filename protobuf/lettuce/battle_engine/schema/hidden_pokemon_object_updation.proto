@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/pokemon_object_updation.proto";
+
+message HiddenPokemonObjectUpdation {
+  PokemonObjectUpdation pokemon_object = 1;
+}
+
+

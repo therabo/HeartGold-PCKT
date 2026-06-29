@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/damage_amount.proto";
+import "lettuce/battle_engine/schema/special_condition_cause.proto";
+import "lettuce/battle_engine/schema/special_condition_type.proto";
+
+message SpecialCondition {
+  SpecialConditionType type = 1;
+  SpecialConditionCause cause = 2;
+  int32 applied_turn_number = 3;
+  DamageAmount override_damage = 4;
+}
+
+

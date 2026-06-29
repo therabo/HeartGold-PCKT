@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package lettuce.battle;
+
+import "lettuce/battle/battle_player.proto";
+
+message BattleSetupData {
+  string battle_id = 1;
+  BattlePlayer player = 2;
+  string pvp_battle_rule_id = 3;
+  string opponent_app_player_id = 4;
+}
+
+

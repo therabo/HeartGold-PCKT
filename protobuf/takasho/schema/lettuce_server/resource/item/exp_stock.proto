@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package takasho.schema.lettuce_server.resource.item;
+
+message ExpStock {
+  int64 current_level = 1;
+  int64 exp = 2;
+}
+
+

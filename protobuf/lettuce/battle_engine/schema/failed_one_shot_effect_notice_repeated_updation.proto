@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/failed_one_shot_effect_notice.proto";
+import "lettuce/battle_engine/schema/failed_one_shot_effect_notice_updation.proto";
+
+message FailedOneShotEffectNoticeRepeatedUpdation {
+  int32 index = 1;
+  oneof operation {
+    FailedOneShotEffectNotice add = 2;
+    FailedOneShotEffectNoticeUpdation updation = 3;
+    bool removed = 4;
+  }
+}
+
+

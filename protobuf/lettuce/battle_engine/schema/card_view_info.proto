@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/card_skin_id.proto";
+
+message CardViewInfo {
+  CardSkinId card_skin_id = 1;
+}
+
+

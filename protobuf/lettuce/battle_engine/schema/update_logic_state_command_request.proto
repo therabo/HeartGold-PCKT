@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/logic/logic_state.proto";
+import "lettuce/battle_engine/schema/logic_state_scope_type.proto";
+
+message UpdateLogicStateCommandRequest {
+  LogicStateScopeType scope = 1;
+  lettuce.battle_engine.schema.logic.LogicState state = 2;
+}
+
+

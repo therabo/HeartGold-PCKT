@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema.logic;
+
+import "lettuce/battle_engine/schema/logic/logic_state.proto";
+import "lettuce/battle_engine/schema/logic/logic_state_updation.proto";
+
+message LogicStateRepeatedUpdation {
+  int32 index = 1;
+  oneof operation {
+    LogicState add = 2;
+    LogicStateUpdation updation = 3;
+    bool removed = 4;
+  }
+}
+
+

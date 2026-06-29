@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.summary.battle_logs;
+
+import "lettuce/battle_engine/schema/origin_card.proto";
+import "lettuce/battle_engine/schema/pokemon_attack_id.proto";
+
+message AttackFailedLog {
+  lettuce.battle_engine.schema.OriginCard card = 1;
+  lettuce.battle_engine.schema.PokemonAttackId attack_id = 2;
+}
+
+

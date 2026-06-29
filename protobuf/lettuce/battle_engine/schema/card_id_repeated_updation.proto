@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/card_id.proto";
+import "lettuce/battle_engine/schema/card_id_updation.proto";
+
+message CardIdRepeatedUpdation {
+  int32 index = 1;
+  oneof operation {
+    CardId add = 2;
+    CardIdUpdation updation = 3;
+    bool removed = 4;
+  }
+}
+
+

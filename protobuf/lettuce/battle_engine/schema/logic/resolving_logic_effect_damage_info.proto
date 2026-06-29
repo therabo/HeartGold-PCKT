@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema.logic;
+
+import "lettuce/battle_engine/schema/card_id.proto";
+import "lettuce/battle_engine/schema/continuous_effect_instance_id.proto";
+import "lettuce/battle_engine/schema/damage_amount.proto";
+import "lettuce/battle_engine/schema/effect_damage_result.proto";
+import "lettuce/battle_engine/schema/player_id.proto";
+
+message ResolvingLogicEffectDamageInfo {
+  bool has_resolving = 1;
+  lettuce.battle_engine.schema.PlayerId applier = 2;
+  lettuce.battle_engine.schema.CardId applier_card = 3;
+  lettuce.battle_engine.schema.DamageAmount damage_amount = 4;
+  lettuce.battle_engine.schema.ContinuousEffectInstanceId effect_instance_id = 5;
+  repeated lettuce.battle_engine.schema.EffectDamageResult damage_results = 6;
+}
+
+

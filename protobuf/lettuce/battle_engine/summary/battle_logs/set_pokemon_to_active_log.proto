@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.summary.battle_logs;
+
+import "lettuce/battle_engine/schema/origin_card.proto";
+import "lettuce/battle_engine/summary/battle_logs/set_pokemon_type.proto";
+
+message SetPokemonToActiveLog {
+  lettuce.battle_engine.schema.OriginCard card = 1;
+  SetPokemonType set_type = 2;
+}
+
+

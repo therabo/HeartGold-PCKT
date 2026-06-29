@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/card_filter_info.proto";
+import "lettuce/battle_engine/schema/player_id.proto";
+
+message PickFilteredFromLibraryRevealmentTopCommandRequest {
+  PlayerId player_id = 1;
+  int32 count = 2;
+  CardFilterInfo filter = 3;
+  bool is_revealed_to_opponent = 4;
+}
+
+

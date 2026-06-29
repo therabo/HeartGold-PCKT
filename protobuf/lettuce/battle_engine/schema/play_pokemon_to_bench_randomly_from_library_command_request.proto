@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/card_filter_info.proto";
+import "lettuce/battle_engine/schema/player_id.proto";
+
+message PlayPokemonToBenchRandomlyFromLibraryCommandRequest {
+  PlayerId player = 1;
+  CardFilterInfo filter = 2;
+  int32 count = 3;
+}
+
+

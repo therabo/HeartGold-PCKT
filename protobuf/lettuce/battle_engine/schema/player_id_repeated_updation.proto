@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/player_id.proto";
+import "lettuce/battle_engine/schema/player_id_updation.proto";
+
+message PlayerIdRepeatedUpdation {
+  int32 index = 1;
+  oneof operation {
+    PlayerId add = 2;
+    PlayerIdUpdation updation = 3;
+    bool removed = 4;
+  }
+}
+
+

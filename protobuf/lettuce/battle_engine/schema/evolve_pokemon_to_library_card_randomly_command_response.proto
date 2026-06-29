@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/card_id.proto";
+import "lettuce/battle_engine/schema/continuous_effect_instance_id.proto";
+import "lettuce/battle_engine/schema/special_condition_recovery.proto";
+
+message EvolvePokemonToLibraryCardRandomlyCommandResponse {
+  CardId evolved_from = 1;
+  CardId evolved_to = 2;
+  repeated SpecialConditionRecovery recoveries = 3;
+  repeated ContinuousEffectInstanceId applied_effects = 4;
+  bool is_shuffled = 5;
+  bool is_evolved = 6;
+}
+
+

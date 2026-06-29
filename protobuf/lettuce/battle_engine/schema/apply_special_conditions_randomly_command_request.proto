@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/battle_object_id.proto";
+import "lettuce/battle_engine/schema/logic_specifier.proto";
+import "lettuce/battle_engine/schema/special_condition_type.proto";
+
+message ApplySpecialConditionsRandomlyCommandRequest {
+  BattleObjectId target = 1;
+  repeated SpecialConditionType types = 2;
+  int32 select_count = 3;
+  LogicSpecifier applier_logic = 4;
+}
+
+

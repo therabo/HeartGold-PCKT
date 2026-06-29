@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/battle_result_state.proto";
+import "lettuce/battle_engine/schema/player_id.proto";
+
+message ForceCompleteGameAction {
+  PlayerId winner = 1;
+  BattleResultState result = 2;
+}
+
+

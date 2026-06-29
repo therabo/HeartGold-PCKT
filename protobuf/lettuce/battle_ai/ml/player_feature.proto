@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package lettuce.battle_ai.ml;
+
+message PlayerFeature {
+  repeated int32 energy_count = 1;
+  repeated int32 is_current_player = 2;
+  repeated int32 is_turn_player = 3;
+  repeated int32 is_first_turn_player = 4;
+  repeated int32 prize = 5;
+  repeated int32 active_energy_pool = 6;
+  repeated int32 inactive_energy_pool = 7;
+  repeated int32 bench_count = 8;
+  repeated int32 trash_energy_count = 9;
+  repeated int32 sweet_relay_count = 10;
+  repeated int32 continuous_effect = 201;
+  repeated int32 trash_energy_type_count = 202;
+}
+
+

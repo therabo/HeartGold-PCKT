@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+message HiddenDrawRevealedCardCommandResponse {
+  int32 count = 1;
+}
+
+

@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package lettuce.battle_ai.common;
+
+import "lettuce/battle_ai/common/atomic_action.proto";
+
+message PossibleAtomicAction {
+  AtomicAction atomic_action = 1;
+  int32 atomic_action_index = 2;
+}
+
+

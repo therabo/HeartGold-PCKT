@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema.effect.impl;
+
+import "lettuce/battle_engine/schema/battle_object_id_updation.proto";
+import "lettuce/battle_engine/schema/pokemon_attack_name_updation.proto";
+
+message ContinuousEffectOperation_PreventDetermineAttackNextTurnForAttackUpdation {
+  lettuce.battle_engine.schema.BattleObjectIdUpdation target = 1;
+  optional int32 applied_turn = 2;
+  lettuce.battle_engine.schema.PokemonAttackNameUpdation attack_name = 3;
+}
+
+

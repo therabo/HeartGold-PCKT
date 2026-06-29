@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+enum BattlePreparationState {
+  BATTLE_PREPARATION_STATE_UNSPECIFIED = 0;
+  BATTLE_PREPARATION_STATE_INITIAL_SETUP = 10;
+  BATTLE_PREPARATION_STATE_PREPARE_FIELD = 20;
+  BATTLE_PREPARATION_STATE_DONE = 30;
+}
+

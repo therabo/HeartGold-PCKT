@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+message DeckSupplyUpdation {
+  string deck_shield_id = 1;
+  string play_mat_id = 2;
+  string battle_coin_id = 3;
+}
+
+

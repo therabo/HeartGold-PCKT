@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/battle_object_id.proto";
+import "lettuce/battle_engine/schema/energy_type.proto";
+
+message MoveTypeSpecifiedEnergiesToMultipleTargetsEvenlyCommandRequest {
+  BattleObjectId from = 1;
+  repeated BattleObjectId to = 2;
+  EnergyType energy_type = 3;
+  int32 source_count = 4;
+  int32 max_count_per_target = 5;
+}
+
+

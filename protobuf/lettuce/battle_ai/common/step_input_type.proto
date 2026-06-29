@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package lettuce.battle_ai.common;
+
+enum StepInputType {
+  STEP_INPUT_TYPE_ATOMIC_ACTION = 0;
+  STEP_INPUT_TYPE_ACTION = 1;
+}
+

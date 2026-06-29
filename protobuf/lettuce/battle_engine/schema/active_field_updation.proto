@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/active_pokemon_object_updation.proto";
+import "lettuce/battle_engine/schema/face_down_card_updation.proto";
+import "lettuce/battle_engine/schema/player_id_updation.proto";
+
+message ActiveFieldUpdation {
+  PlayerIdUpdation owner = 1;
+  ActivePokemonObjectUpdation active_pokemon = 2;
+  FaceDownCardUpdation face_down_card = 3;
+}
+
+

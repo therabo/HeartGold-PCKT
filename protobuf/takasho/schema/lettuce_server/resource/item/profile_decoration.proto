@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package takasho.schema.lettuce_server.resource.item;
+
+message ProfileDecoration {
+  message Types {
+    enum Type {
+      TYPE_UNSPECIFIED = 0;
+      TYPE_EMBLEM = 1;
+      TYPE_ICON = 2;
+    }
+  }
+  ProfileDecoration.Types.Type type = 1;
+  string id = 2;
+  fixed64 amount = 3;
+}
+
+

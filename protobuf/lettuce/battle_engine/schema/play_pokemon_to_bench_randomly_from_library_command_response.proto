@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/battle_object_id.proto";
+import "lettuce/battle_engine/schema/continuous_effect_instance_id.proto";
+
+message PlayPokemonToBenchRandomlyFromLibraryCommandResponse {
+  repeated BattleObjectId played_pokemons = 1;
+  bool is_shuffled = 2;
+  repeated ContinuousEffectInstanceId applied_effects = 3;
+}
+
+

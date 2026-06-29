@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/card_filter_info.proto";
+import "lettuce/battle_engine/schema/player_id.proto";
+
+message HiddenRevealAllFilteredLibraryCardCommandRequest {
+  PlayerId player_id = 1;
+  PlayerId viewer_player_id = 2;
+  CardFilterInfo filter = 3;
+  bool should_shuffle_on_not_revealed = 4;
+  bool should_shuffle_on_revealed = 5;
+}
+
+

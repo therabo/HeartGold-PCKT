@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/card_repeated_updation.proto";
+import "lettuce/battle_engine/schema/inferable_hidden_cards_updation.proto";
+import "lettuce/battle_engine/schema/inferable_ordered_hidden_cards_updation.proto";
+
+message LibraryUpdation {
+  repeated CardRepeatedUpdation cards = 1;
+  InferableOrderedHiddenCardsUpdation inferable_self_ordered_cards = 2;
+  InferableOrderedHiddenCardsUpdation inferable_opponent_ordered_cards = 3;
+  InferableHiddenCardsUpdation inferable_opponent_unordered_cards = 4;
+}
+
+

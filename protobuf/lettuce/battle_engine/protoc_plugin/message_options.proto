@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.protoc_plugin;
+
+import "lettuce/battle_engine/protoc_plugin/custom_option_boolean.proto";
+import "lettuce/battle_engine/protoc_plugin/hidden_options.proto";
+import "lettuce/battle_engine/protoc_plugin/module_input_options.proto";
+
+message MessageOptions {
+  HiddenOptions hidden = 1;
+  repeated ModuleInputOptions input = 2;
+  string cs_type = 3;
+  CustomOptionBoolean with_updation = 4;
+  int32 impl_index = 5;
+}
+
+

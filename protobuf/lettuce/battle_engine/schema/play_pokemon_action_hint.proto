@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/card_id.proto";
+
+message PlayPokemonActionHint {
+  repeated CardId candidates = 1;
+  repeated int32 playable_bench_positions = 2;
+}
+
+

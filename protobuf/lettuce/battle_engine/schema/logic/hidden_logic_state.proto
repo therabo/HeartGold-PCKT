@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema.logic;
+
+import "lettuce/battle_engine/schema/logic/impl/hidden_logic_state_common.proto";
+import "lettuce/battle_engine/schema/logic/impl/logic_state_activated.proto";
+import "lettuce/battle_engine/schema/logic/impl/logic_state_dsl_step.proto";
+import "lettuce/battle_engine/schema/logic/impl/logic_state_empty.proto";
+import "lettuce/battle_engine/schema/logic/impl/logic_state_flip_coin.proto";
+import "lettuce/battle_engine/schema/logic/impl/logic_state_select_field_pokemon_flip_coin.proto";
+import "lettuce/battle_engine/schema/logic/impl/logic_state_select_player.proto";
+import "lettuce/battle_engine/schema/logic/impl/logic_state_serial_step.proto";
+import "lettuce/battle_engine/schema/logic/local/triggered/trigger_info.proto";
+import "lettuce/battle_engine/schema/logic_specifier.proto";
+
+message HiddenLogicState {
+  lettuce.battle_engine.schema.LogicSpecifier specifier = 1;
+  lettuce.battle_engine.schema.logic.local.triggered.TriggerInfo trigger_info = 2;
+  oneof state {
+    lettuce.battle_engine.schema.logic.impl.LogicState_Empty logic_state_empty = 100;
+    lettuce.battle_engine.schema.logic.impl.LogicState_SerialStep logic_state_serial_step = 101;
+    lettuce.battle_engine.schema.logic.impl.LogicState_FlipCoin logic_state_flip_coin = 102;
+    lettuce.battle_engine.schema.logic.impl.LogicState_SelectFieldPokemonFlipCoin logic_state_select_field_pokemon_flip_coin = 103;
+    lettuce.battle_engine.schema.logic.impl.LogicState_Activated logic_state_activated = 104;
+    lettuce.battle_engine.schema.logic.impl.LogicState_DslStep logic_state_dsl_step = 105;
+    lettuce.battle_engine.schema.logic.impl.HiddenLogicState_Common logic_common = 106;
+    lettuce.battle_engine.schema.logic.impl.LogicState_SelectPlayer logic_select_player = 107;
+  }
+}
+
+

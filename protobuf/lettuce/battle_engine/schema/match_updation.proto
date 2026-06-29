@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/origin_player_updation.proto";
+
+message MatchUpdation {
+  OriginPlayerUpdation player1 = 1;
+  OriginPlayerUpdation player2 = 2;
+}
+
+

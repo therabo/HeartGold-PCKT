@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package takasho.schema.lettuce_server.resource.item;
+
+message Pack {
+  string id = 1;
+  fixed64 amount = 2;
+}
+
+

@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema.effect.impl;
+
+import "lettuce/battle_engine/schema/evolution_stage.proto";
+import "lettuce/battle_engine/schema/player_id.proto";
+
+message ContinuousEffectOperation_ReduceRetreatCostEvolutionStageSpecified {
+  lettuce.battle_engine.schema.PlayerId target = 1;
+  int32 reduce_cost = 2;
+  lettuce.battle_engine.schema.EvolutionStage evolution_stage = 3;
+}
+
+

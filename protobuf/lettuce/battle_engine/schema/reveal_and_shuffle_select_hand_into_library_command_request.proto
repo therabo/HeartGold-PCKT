@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/card_id.proto";
+import "lettuce/battle_engine/schema/player_id.proto";
+
+message RevealAndShuffleSelectHandIntoLibraryCommandRequest {
+  PlayerId player_id = 1;
+  repeated CardId select_card_ids = 2;
+}
+
+

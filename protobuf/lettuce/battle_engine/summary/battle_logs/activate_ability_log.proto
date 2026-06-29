@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.summary.battle_logs;
+
+import "lettuce/battle_engine/schema/origin_card.proto";
+import "lettuce/battle_engine/schema/pokemon_ability_id.proto";
+
+message ActivateAbilityLog {
+  lettuce.battle_engine.schema.OriginCard card = 1;
+  lettuce.battle_engine.schema.PokemonAbilityId ability_id = 2;
+}
+
+

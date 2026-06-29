@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/attack_failed_reason.proto";
+import "lettuce/battle_engine/schema/battle_object_id.proto";
+import "lettuce/battle_engine/schema/pokemon_attack_id.proto";
+
+message ExecuteAttackEndStepCommandResponse {
+  BattleObjectId attacker = 1;
+  bool has_attack_failed = 2;
+  PokemonAttackId attack_id = 3;
+  AttackFailedReason attack_failed_reason = 4;
+}
+
+

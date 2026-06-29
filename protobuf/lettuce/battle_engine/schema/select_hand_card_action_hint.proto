@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/card_id.proto";
+import "lettuce/battle_engine/schema/player_id.proto";
+
+message SelectHandCardActionHint {
+  repeated CardId candidates = 1;
+  int32 min_select_count = 2;
+  int32 max_select_count = 3;
+  PlayerId player_id = 4;
+}
+
+

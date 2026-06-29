@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/battle_object_id_updation.proto";
+import "lettuce/battle_engine/schema/damage_amount_updation.proto";
+
+message HealResultUpdation {
+  BattleObjectIdUpdation target = 1;
+  DamageAmountUpdation heal_amount = 2;
+  optional int32 effect_delta = 3;
+  optional bool is_prevented = 4;
+}
+
+

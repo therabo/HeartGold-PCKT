@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+enum EvolutionStage {
+  EVOLUTION_STAGE_UNSPECIFIED = 0;
+  EVOLUTION_STAGE_BASIC = 1;
+  EVOLUTION_STAGE_ONE = 2;
+  EVOLUTION_STAGE_TWO = 3;
+}
+

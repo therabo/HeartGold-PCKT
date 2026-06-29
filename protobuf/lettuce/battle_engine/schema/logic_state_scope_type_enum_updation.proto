@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/logic_state_scope_type.proto";
+
+message LogicStateScopeTypeEnumUpdation {
+  LogicStateScopeType value = 1;
+}
+
+

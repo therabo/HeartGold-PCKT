@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema.effect.impl;
+
+import "lettuce/battle_engine/schema/battle_object_id.proto";
+import "lettuce/battle_engine/schema/card_name.proto";
+
+message ContinuousEffectOperation_RetreatCostZeroWhileSpecifiedNamePokemonExists {
+  lettuce.battle_engine.schema.BattleObjectId target = 1;
+  lettuce.battle_engine.schema.CardName card_name = 2;
+}
+
+

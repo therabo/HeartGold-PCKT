@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/player_id_updation.proto";
+import "lettuce/battle_engine/schema/pokemon_attack_name_updation.proto";
+
+message PokemonAttackUsedOnPreviousTurnUpdation {
+  PlayerIdUpdation player = 1;
+  PokemonAttackNameUpdation name = 2;
+  optional int32 turn = 3;
+}
+
+

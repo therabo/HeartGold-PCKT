@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/action_type.proto";
+
+message ActionTypeEnumUpdation {
+  ActionType value = 1;
+}
+
+

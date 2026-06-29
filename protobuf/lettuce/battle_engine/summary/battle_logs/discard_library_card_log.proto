@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.summary.battle_logs;
+
+message DiscardLibraryCardLog {
+  int32 discard_count = 1;
+}
+
+

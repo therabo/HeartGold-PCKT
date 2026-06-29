@@ -1,0 +1,75 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/activate_ability_action.proto";
+import "lettuce/battle_engine/schema/attach_energy_by_effect_action.proto";
+import "lettuce/battle_engine/schema/attach_energy_from_zone_action.proto";
+import "lettuce/battle_engine/schema/attach_pokemon_tool_action.proto";
+import "lettuce/battle_engine/schema/concede_action.proto";
+import "lettuce/battle_engine/schema/confirm_action.proto";
+import "lettuce/battle_engine/schema/debug_execute_command_action.proto";
+import "lettuce/battle_engine/schema/determine_attack_action.proto";
+import "lettuce/battle_engine/schema/determine_turn_end_action.proto";
+import "lettuce/battle_engine/schema/discard_field_pokemon_action.proto";
+import "lettuce/battle_engine/schema/end_prepare_field_action.proto";
+import "lettuce/battle_engine/schema/evolve_action.proto";
+import "lettuce/battle_engine/schema/flip_coin_action.proto";
+import "lettuce/battle_engine/schema/force_complete_game_action.proto";
+import "lettuce/battle_engine/schema/injection_data.proto";
+import "lettuce/battle_engine/schema/play_pokemon_action.proto";
+import "lettuce/battle_engine/schema/play_trainer_action.proto";
+import "lettuce/battle_engine/schema/player_id.proto";
+import "lettuce/battle_engine/schema/prepare_active_field_action.proto";
+import "lettuce/battle_engine/schema/prepare_bench_field_action.proto";
+import "lettuce/battle_engine/schema/respond_to_optional_offer_action.proto";
+import "lettuce/battle_engine/schema/retreat_action.proto";
+import "lettuce/battle_engine/schema/select_attached_energy_action.proto";
+import "lettuce/battle_engine/schema/select_attack_action.proto";
+import "lettuce/battle_engine/schema/select_bench_on_knocked_out_action.proto";
+import "lettuce/battle_engine/schema/select_discard_pile_card_action.proto";
+import "lettuce/battle_engine/schema/select_effect_action.proto";
+import "lettuce/battle_engine/schema/select_field_pokemon_action.proto";
+import "lettuce/battle_engine/schema/select_hand_card_action.proto";
+import "lettuce/battle_engine/schema/select_hand_card_and_field_pokemon_action.proto";
+import "lettuce/battle_engine/schema/select_library_revealed_card_action.proto";
+import "lettuce/battle_engine/schema/select_player_action.proto";
+
+message Action {
+  PlayerId player_id = 1;
+  InjectionData injection = 2;
+  oneof action {
+    DebugExecuteCommandAction debug_execute_command = 100;
+    AttachEnergyFromZoneAction attach_energy_from_zone = 1001;
+    DetermineAttackAction determine_attack = 1002;
+    DetermineTurnEndAction determine_turn_end = 1003;
+    EvolveAction evolve = 1004;
+    PlayPokemonAction play_pokemon = 1005;
+    PlayTrainerAction play_trainer = 1006;
+    RetreatAction retreat = 1007;
+    SelectBenchOnKnockedOutAction select_bench_on_knocked_out = 1008;
+    FlipCoinAction flip_coin = 1009;
+    SelectFieldPokemonAction select_field_pokemon = 1010;
+    ActivateAbilityAction activate_ability = 1011;
+    SelectLibraryRevealedCardAction select_library_revealed_card = 1012;
+    SelectAttachedEnergyAction select_attached_energy = 1013;
+    ConcedeAction concede = 1014;
+    PrepareActiveFieldAction prepare_active_field = 1015;
+    PrepareBenchFieldAction prepare_bench_field = 1016;
+    EndPrepareFieldAction end_prepare_field = 1017;
+    DiscardFieldPokemonAction discard_field_pokemon = 1018;
+    SelectAttackAction select_attack = 1019;
+    ConfirmAction confirm = 1020;
+    AttachEnergyByEffectAction attach_energy_by_effect = 1030;
+    SelectDiscardPileCardAction select_discard_pile_card = 1040;
+    ForceCompleteGameAction force_complete_game = 1050;
+    AttachPokemonToolAction attach_pokemon_tool = 1060;
+    SelectHandCardAction select_hand_card = 1070;
+    SelectPlayerAction select_player = 1080;
+    SelectEffectAction select_effect = 3001;
+    SelectHandCardAndFieldPokemonAction select_hand_card_and_field_pokemon = 3002;
+    RespondToOptionalOfferAction respond_to_optional_offer = 3003;
+  }
+}
+
+

@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/draw_card_result_type.proto";
+
+message DrawCardResultTypeEnumUpdation {
+  DrawCardResultType value = 1;
+}
+
+

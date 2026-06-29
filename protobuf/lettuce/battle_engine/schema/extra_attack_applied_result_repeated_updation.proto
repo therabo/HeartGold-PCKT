@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/extra_attack_applied_result.proto";
+import "lettuce/battle_engine/schema/extra_attack_applied_result_updation.proto";
+
+message ExtraAttackAppliedResultRepeatedUpdation {
+  int32 index = 1;
+  oneof operation {
+    ExtraAttackAppliedResult add = 2;
+    ExtraAttackAppliedResultUpdation updation = 3;
+    bool removed = 4;
+  }
+}
+
+

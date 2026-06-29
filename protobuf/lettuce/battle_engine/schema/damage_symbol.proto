@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+enum DamageSymbol {
+  DAMAGE_SYMBOL_UNSPECIFIED = 0;
+  DAMAGE_SYMBOL_PLUS = 1;
+  DAMAGE_SYMBOL_MULTIPLY = 2;
+}
+

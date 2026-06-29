@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/battle_result_state_enum_updation.proto";
+import "lettuce/battle_engine/schema/player_id_updation.proto";
+
+message ResultUpdation {
+  BattleResultStateEnumUpdation state = 1;
+  PlayerIdUpdation winner = 2;
+  PlayerIdUpdation conceded_player = 3;
+}
+
+

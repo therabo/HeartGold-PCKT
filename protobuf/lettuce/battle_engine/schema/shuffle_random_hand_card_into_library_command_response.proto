@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/card.proto";
+
+message ShuffleRandomHandCardIntoLibraryCommandResponse {
+  repeated Card randomly_selected_cards = 1;
+  bool is_shuffled = 2;
+}
+
+

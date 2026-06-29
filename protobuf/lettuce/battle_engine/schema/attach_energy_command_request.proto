@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/energy_attach_request.proto";
+import "lettuce/battle_engine/schema/energy_set.proto";
+
+message AttachEnergyCommandRequest {
+  repeated EnergyAttachRequest request = 1;
+  EnergySet required_energy = 2;
+}
+
+

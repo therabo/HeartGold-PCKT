@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.summary.battle_logs;
+
+import "lettuce/battle_engine/schema/card.proto";
+import "lettuce/battle_engine/schema/energy_type.proto";
+import "lettuce/battle_engine/schema/origin_card.proto";
+
+message KnockOutLog {
+  lettuce.battle_engine.schema.OriginCard card = 1;
+  lettuce.battle_engine.schema.EnergyType knocked_out_by_attack_type = 2;
+  bool is_active_pokemon_knocked_out = 3;
+  lettuce.battle_engine.schema.Card knocked_out_by_card = 4;
+}
+
+

@@ -1,0 +1,44 @@
+syntax = "proto3";
+
+package lettuce.battle_ai.ml;
+
+import "lettuce/battle_ai/ml/attack_feature.proto";
+
+message CardFeature {
+  repeated int32 card_id = 1;
+  repeated int32 pokemon_tool_id = 2;
+  repeated int32 card_is_pokemon = 3;
+  repeated int32 card_pokemon_type = 4;
+  repeated int32 card_trainer_type = 5;
+  repeated int32 weakness_type = 6;
+  repeated int32 retreat_cost = 7;
+  repeated int32 is_ex = 8;
+  repeated int32 is_ultra_beast = 9;
+  repeated int32 pokemon_stage = 10;
+  repeated int32 attack_count = 11;
+  repeated int32 has_ability = 12;
+  repeated int32 card_status = 13;
+  repeated int32 is_selected_card = 14;
+  repeated int32 is_selectable = 15;
+  repeated int32 evolvable_card_status = 16;
+  repeated int32 redundant_energy = 17;
+  repeated int32 knocked_out_attack_count = 18;
+  repeated int32 energy_count = 19;
+  repeated int32 is_retreatable = 20;
+  repeated int32 retreat_cost_with_effect = 21;
+  repeated int32 retreat_cost_shortage_with_effect = 22;
+  repeated int32 is_playable = 23;
+  repeated int32 library_inferable_order = 24;
+  repeated int32 pokemon_damage_amount = 101;
+  repeated int32 pokemon_max_hp = 102;
+  repeated int32 pokemon_remaining_hp = 103;
+  repeated int32 continuous_effect = 201;
+  repeated int32 special_condition = 202;
+  repeated int32 energy_type_count = 203;
+  repeated int32 redundant_energy_type_count_from_max_required = 204;
+  repeated int32 insufficient_energy_type_count_to_max_required = 205;
+  AttackFeature attack1 = 301;
+  AttackFeature attack2 = 302;
+}
+
+

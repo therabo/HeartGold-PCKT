@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/bench_field.proto";
+import "lettuce/battle_engine/schema/bench_field_updation.proto";
+
+message BenchFieldRepeatedUpdation {
+  int32 index = 1;
+  oneof operation {
+    BenchField add = 2;
+    BenchFieldUpdation updation = 3;
+    bool removed = 4;
+  }
+}
+
+

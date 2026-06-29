@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+enum CardType {
+  CARD_TYPE_UNSPECIFIED = 0;
+  CARD_TYPE_POKEMON = 1;
+  CARD_TYPE_TRAINER = 2;
+}
+

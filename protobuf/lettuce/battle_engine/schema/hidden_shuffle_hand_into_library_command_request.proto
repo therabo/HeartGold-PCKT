@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/player_id.proto";
+
+message HiddenShuffleHandIntoLibraryCommandRequest {
+  PlayerId player_id = 1;
+}
+
+

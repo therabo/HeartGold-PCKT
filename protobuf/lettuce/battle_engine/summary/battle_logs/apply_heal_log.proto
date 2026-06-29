@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.summary.battle_logs;
+
+import "lettuce/battle_engine/schema/origin_card.proto";
+
+message ApplyHealLog {
+  lettuce.battle_engine.schema.OriginCard card = 1;
+  int32 applied_heal = 2;
+  int32 total_damage = 3;
+  int32 max_hp = 4;
+}
+
+

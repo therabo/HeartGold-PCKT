@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/one_shot_effect_apply_specification_reason.proto";
+import "lettuce/battle_engine/schema/one_shot_effect_apply_specification_reason_parameter.proto";
+
+message FailedOneShotEffectNotice {
+  OneShotEffectApplySpecificationReason reason = 1;
+  repeated OneShotEffectApplySpecificationReasonParameter parameters = 2;
+}
+
+

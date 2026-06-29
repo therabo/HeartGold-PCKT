@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema.logic.local.triggered;
+
+import "lettuce/battle_engine/schema/logic/local/triggered/at_end_phase_trigger.proto";
+import "lettuce/battle_engine/schema/logic/local/triggered/at_pokemon_checkup_trigger.proto";
+import "lettuce/battle_engine/schema/logic/local/triggered/attack_damage_applied_trigger.proto";
+import "lettuce/battle_engine/schema/logic/local/triggered/empty.proto";
+import "lettuce/battle_engine/schema/logic/local/triggered/energy_attached_from_zone_trigger.proto";
+import "lettuce/battle_engine/schema/logic/local/triggered/knocked_out_trigger.proto";
+import "lettuce/battle_engine/schema/logic/local/triggered/pokemon_evolved_trigger.proto";
+import "lettuce/battle_engine/schema/logic/local/triggered/pokemon_played_to_bench_trigger.proto";
+import "lettuce/battle_engine/schema/logic/local/triggered/special_condition_inconsistent_trigger.proto";
+
+message TriggerInfoUpdation {
+  oneof parameter {
+    Empty empty = 1;
+    AttackDamageAppliedTrigger attack_damage_applied_trigger = 2;
+    KnockedOutTrigger knocked_out_trigger = 3;
+    AtEndPhaseTrigger at_end_phase_trigger = 4;
+    AtPokemonCheckupTrigger at_pokemon_checkup_trigger = 5;
+    EnergyAttachedFromZoneTrigger energy_attached_trigger = 6;
+    SpecialConditionInconsistentTrigger special_condition_inconsistent_trigger = 7;
+    PokemonEvolvedTrigger pokemon_evolved_trigger = 8;
+    PokemonPlayedToBenchTrigger pokemon_played_to_bench_trigger = 9;
+  }
+}
+
+

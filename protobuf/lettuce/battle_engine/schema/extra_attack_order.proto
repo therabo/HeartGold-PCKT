@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/battle_object_id.proto";
+import "lettuce/battle_engine/schema/damage_amount.proto";
+import "lettuce/battle_engine/schema/extra_attack_order_option.proto";
+
+message ExtraAttackOrder {
+  BattleObjectId target = 1;
+  DamageAmount damage = 2;
+  ExtraAttackOrderOption option = 3;
+}
+
+

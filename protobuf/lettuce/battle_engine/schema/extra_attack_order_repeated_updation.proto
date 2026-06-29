@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/extra_attack_order.proto";
+import "lettuce/battle_engine/schema/extra_attack_order_updation.proto";
+
+message ExtraAttackOrderRepeatedUpdation {
+  int32 index = 1;
+  oneof operation {
+    ExtraAttackOrder add = 2;
+    ExtraAttackOrderUpdation updation = 3;
+    bool removed = 4;
+  }
+}
+
+

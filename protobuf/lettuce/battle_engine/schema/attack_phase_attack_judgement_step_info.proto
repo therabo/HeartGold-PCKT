@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/attack_failed_reason.proto";
+
+message AttackPhaseAttackJudgementStepInfo {
+  bool is_attack_failed = 1;
+  AttackFailedReason attack_failed_reason = 2;
+  bool is_misfire_copy_attack = 3;
+}
+
+

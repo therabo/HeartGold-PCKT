@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/prize_amount_updation.proto";
+
+message PrizeRegulationUpdation {
+  optional bool change_winning_prize = 1;
+  PrizeAmountUpdation winning_prize = 2;
+}
+
+

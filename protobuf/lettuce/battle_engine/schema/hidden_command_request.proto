@@ -1,0 +1,49 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/hidden_add_or_update_logic_state_command_request.proto";
+import "lettuce/battle_engine/schema/hidden_draw_card_from_libraries_command_request.proto";
+import "lettuce/battle_engine/schema/hidden_draw_card_from_library_command_request.proto";
+import "lettuce/battle_engine/schema/hidden_draw_revealed_card_command_request.proto";
+import "lettuce/battle_engine/schema/hidden_exchange_hand_card_for_library_pokemon_command_request.proto";
+import "lettuce/battle_engine/schema/hidden_execute_start_phase_draw_step_command_request.proto";
+import "lettuce/battle_engine/schema/hidden_pick_filtered_from_library_revealment_top_command_request.proto";
+import "lettuce/battle_engine/schema/hidden_pick_filtered_randomly_from_library_command_request.proto";
+import "lettuce/battle_engine/schema/hidden_put_revealed_card_to_library_bottom_command_request.proto";
+import "lettuce/battle_engine/schema/hidden_put_revealed_card_to_library_top_command_request.proto";
+import "lettuce/battle_engine/schema/hidden_reveal_all_filtered_library_card_command_request.proto";
+import "lettuce/battle_engine/schema/hidden_reveal_filtered_random_library_card_command_request.proto";
+import "lettuce/battle_engine/schema/hidden_reveal_library_top_card_command_request.proto";
+import "lettuce/battle_engine/schema/hidden_set_pokemon_to_active_command_request.proto";
+import "lettuce/battle_engine/schema/hidden_set_pokemon_to_bench_command_request.proto";
+import "lettuce/battle_engine/schema/hidden_shuffle_hand_into_library_command_request.proto";
+import "lettuce/battle_engine/schema/hidden_shuffle_hands_into_library_command_request.proto";
+import "lettuce/battle_engine/schema/hidden_shuffle_revealed_card_into_library_command_request.proto";
+import "lettuce/battle_engine/schema/hidden_update_logic_state_command_request.proto";
+
+message HiddenCommandRequest {
+  oneof request {
+    HiddenSetPokemonToActiveCommandRequest set_pokemon_to_active = 19;
+    HiddenSetPokemonToBenchCommandRequest set_pokemon_to_bench = 20;
+    HiddenUpdateLogicStateCommandRequest update_logic_state = 35;
+    HiddenAddOrUpdateLogicStateCommandRequest add_or_update_logic_state = 36;
+    HiddenDrawCardFromLibraryCommandRequest draw_card_from_library = 61;
+    HiddenRevealLibraryTopCardCommandRequest reveal_library_top_card = 64;
+    HiddenPutRevealedCardToLibraryTopCommandRequest put_revealed_card_to_library_top = 65;
+    HiddenShuffleHandIntoLibraryCommandRequest shuffle_hand_into_library = 67;
+    HiddenPutRevealedCardToLibraryBottomCommandRequest put_revealed_card_to_library_bottom = 99;
+    HiddenDrawRevealedCardCommandRequest draw_revealed_card = 100;
+    HiddenExecuteStartPhaseDrawStepCommandRequest execute_start_phase_draw_step = 103;
+    HiddenExchangeHandCardForLibraryPokemonCommandRequest exchange_hand_card_for_library_pokemon = 203;
+    HiddenRevealFilteredRandomLibraryCardCommandRequest reveal_filtered_random_library_card = 303;
+    HiddenShuffleRevealedCardIntoLibraryCommandRequest shuffle_revealed_card_into_library = 305;
+    HiddenRevealAllFilteredLibraryCardCommandRequest reveal_all_filtered_library_card = 313;
+    HiddenPickFilteredRandomlyFromLibraryCommandRequest pick_filtered_randomly_from_library = 314;
+    HiddenShuffleHandsIntoLibraryCommandRequest shuffle_hands_into_library = 319;
+    HiddenDrawCardFromLibrariesCommandRequest draw_card_from_libraries = 320;
+    HiddenPickFilteredFromLibraryRevealmentTopCommandRequest pick_filtered_from_library_revealment_top = 404;
+  }
+}
+
+

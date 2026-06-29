@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/flip_coin_flip_type.proto";
+
+message FlipCoinFlipTypeEnumUpdation {
+  FlipCoinFlipType value = 1;
+}
+
+

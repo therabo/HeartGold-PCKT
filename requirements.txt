@@ -1,0 +1,8 @@
+google
+grpcio
+protobuf
+requests
+certifi
+pymongo
+questionary
+rich

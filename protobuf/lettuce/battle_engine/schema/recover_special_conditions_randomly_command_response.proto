@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/special_condition_recovery.proto";
+
+message RecoverSpecialConditionsRandomlyCommandResponse {
+  repeated SpecialConditionRecovery recoveries = 1;
+  bool is_prevented = 2;
+}
+
+

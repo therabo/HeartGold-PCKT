@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package lettuce.battle;
+
+message BattleCard {
+  string card_id = 1;
+  string card_skin_id = 2;
+}
+
+

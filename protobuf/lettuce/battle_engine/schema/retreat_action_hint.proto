@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/battle_object_id.proto";
+import "lettuce/battle_engine/schema/energy_set.proto";
+import "lettuce/battle_engine/schema/energy_type.proto";
+
+message RetreatActionHint {
+  repeated BattleObjectId candidates = 1;
+  EnergySet retreater_attached_energies = 3;
+  int32 retreat_cost = 5;
+  repeated EnergyType double_specified_energy_types = 6;
+}
+
+

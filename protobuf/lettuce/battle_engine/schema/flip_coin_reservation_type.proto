@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+enum FlipCoinReservationType {
+  FLIP_COIN_RESERVATION_TYPE_UNSPECIFIED = 0;
+  FLIP_COIN_RESERVATION_TYPE_FIX_FIRST_HEAD = 1;
+}
+

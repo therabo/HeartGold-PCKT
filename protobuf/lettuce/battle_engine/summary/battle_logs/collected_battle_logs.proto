@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.summary.battle_logs;
+
+import "lettuce/battle_engine/summary/battle_logs/battle_log.proto";
+
+message CollectedBattleLogs {
+  repeated BattleLog logs = 1;
+  fixed32 game_progress_id = 2;
+}
+
+

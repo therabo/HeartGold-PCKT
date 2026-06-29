@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/deck_supply.proto";
+import "lettuce/battle_engine/schema/energy_type.proto";
+
+message PrivateDeck {
+  repeated EnergyType energy_types = 2;
+  DeckSupply supply = 3;
+}
+
+

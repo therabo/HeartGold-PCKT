@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/battle_object_store.proto";
+import "lettuce/battle_engine/schema/battle_preparation.proto";
+import "lettuce/battle_engine/schema/card.proto";
+import "lettuce/battle_engine/schema/effect/continuous_effect_store.proto";
+import "lettuce/battle_engine/schema/hidden_card_store.proto";
+import "lettuce/battle_engine/schema/hidden_field.proto";
+import "lettuce/battle_engine/schema/hidden_players.proto";
+import "lettuce/battle_engine/schema/hidden_random.proto";
+import "lettuce/battle_engine/schema/hidden_turn.proto";
+import "lettuce/battle_engine/schema/logic/hidden_logic_store.proto";
+import "lettuce/battle_engine/schema/pokemon_attack_used_count.proto";
+import "lettuce/battle_engine/schema/result.proto";
+
+message HiddenStore {
+  HiddenTurn turn = 1;
+  HiddenPlayers players = 2;
+  HiddenField field = 3;
+  Result result = 4;
+  lettuce.battle_engine.schema.logic.HiddenLogicStore logic_store = 5;
+  HiddenRandom random = 6;
+  lettuce.battle_engine.schema.effect.ContinuousEffectStore continuous_effect_store = 7;
+  Card activating_trainer = 8;
+  BattleObjectStore battle_object_store = 9;
+  BattlePreparation battle_preparation = 10;
+  HiddenCardStore card_store = 11;
+  repeated PokemonAttackUsedCount pokemon_attack_used_counts = 12;
+}
+
+

@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/copy_attack_misfired_reason.proto";
+
+message MisfireCopyAttackCommandRequest {
+  CopyAttackMisfiredReason reason = 1;
+}
+
+

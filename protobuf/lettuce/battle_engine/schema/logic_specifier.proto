@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/battle_object_id.proto";
+import "lettuce/battle_engine/schema/card_id.proto";
+import "lettuce/battle_engine/schema/continuous_effect_instance_id.proto";
+import "lettuce/battle_engine/schema/logic_type.proto";
+import "lettuce/battle_engine/schema/master_card_id.proto";
+import "lettuce/battle_engine/schema/master_trainer_id.proto";
+import "lettuce/battle_engine/schema/pokemon_ability_id.proto";
+import "lettuce/battle_engine/schema/pokemon_attack_id.proto";
+
+message LogicSpecifier {
+  BattleObjectId battle_object_id = 1;
+  CardId card_id = 2;
+  LogicType logic_type = 3;
+  PokemonAttackId attack_id = 4;
+  PokemonAbilityId ability_id = 5;
+  PokemonAttackId parent_attack_id = 6;
+  ContinuousEffectInstanceId continuous_effect_instance_id = 7;
+  MasterTrainerId trainer_id = 8;
+  MasterCardId owner_card_id = 9;
+}
+
+

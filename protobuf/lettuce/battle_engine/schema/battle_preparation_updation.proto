@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/battle_preparation_state_enum_updation.proto";
+import "lettuce/battle_engine/schema/player_id_updation.proto";
+import "lettuce/battle_engine/schema/prepare_field_info_updation.proto";
+
+message BattlePreparationUpdation {
+  BattlePreparationStateEnumUpdation state = 1;
+  PlayerIdUpdation first_turn_player = 2;
+  PrepareFieldInfoUpdation prepare_field_info = 3;
+}
+
+

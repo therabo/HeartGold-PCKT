@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+message Random {
+  fixed64 state1 = 1;
+  fixed64 state2 = 2;
+}
+
+

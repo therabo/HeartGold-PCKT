@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package lettuce.battle;
+
+import "lettuce/battle/battle_deck.proto";
+
+message BattlePlayer {
+  string app_player_id = 1;
+  string name = 2;
+  BattleDeck deck = 3;
+}
+
+

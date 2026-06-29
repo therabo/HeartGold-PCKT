@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/flip_coin_result_type.proto";
+
+message InjectionData {
+  repeated FlipCoinResultType flip_coin_results = 1;
+}
+
+

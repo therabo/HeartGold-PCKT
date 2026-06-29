@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/attack_damage_calculation_step_info_updation.proto";
+import "lettuce/battle_engine/schema/attack_phase_attack_before_doing_damage_step_info_updation.proto";
+import "lettuce/battle_engine/schema/attack_phase_attack_judgement_step_info_updation.proto";
+import "lettuce/battle_engine/schema/attack_phase_common_step_info_updation.proto";
+import "lettuce/battle_engine/schema/pokemon_checkup_special_condition_step_info_updation.proto";
+import "lettuce/battle_engine/schema/step_state_enum_updation.proto";
+import "lettuce/battle_engine/schema/step_type_enum_updation.proto";
+
+message StepUpdation {
+  StepTypeEnumUpdation step_type = 1;
+  StepStateEnumUpdation step_state = 2;
+  AttackPhaseAttackJudgementStepInfoUpdation attack_phase_attack_judgement_step_info = 3;
+  AttackDamageCalculationStepInfoUpdation attack_damage_calculation_step_info = 4;
+  AttackPhaseCommonStepInfoUpdation attack_phase_common_step_info = 6;
+  PokemonCheckupSpecialConditionStepInfoUpdation pokemon_checkup_special_condition_step_info = 7;
+  AttackPhaseAttackBeforeDoingDamageStepInfoUpdation attack_phase_attack_before_doing_damage_step_info = 8;
+}
+
+

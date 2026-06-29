@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package lettuce.battle_ai.ml;
+
+message AttackFeature {
+  repeated int32 attack_id = 1;
+  repeated int32 attack_energy_count = 2;
+  repeated int32 attack_colored_energy_count = 3;
+  repeated int32 attack_colorless_energy_count = 4;
+  repeated int32 attack_colored_energy_shortage = 5;
+  repeated int32 attack_colorless_energy_shortage = 6;
+  repeated int32 attack_energy_shortage_total = 7;
+  repeated int32 shortage_energy_type = 8;
+  repeated int32 active_energy_required_color = 9;
+  repeated int32 inactive_energy_required_color = 10;
+  repeated int32 attack_damage_symbol = 11;
+  repeated int32 attack_used_on_previous_turn = 12;
+  repeated int32 knock_out_attack_count = 13;
+  repeated int32 attack_damage_amount = 101;
+  repeated int32 expected_attack_damage_amount = 102;
+  repeated int32 required_energy_type_count = 201;
+  repeated int32 insufficient_energy_type_count = 202;
+}
+
+

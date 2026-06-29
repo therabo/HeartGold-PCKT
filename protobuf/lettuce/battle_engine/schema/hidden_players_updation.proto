@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/hidden_player_updation.proto";
+
+message HiddenPlayersUpdation {
+  HiddenPlayerUpdation player1 = 1;
+  HiddenPlayerUpdation player2 = 2;
+}
+
+

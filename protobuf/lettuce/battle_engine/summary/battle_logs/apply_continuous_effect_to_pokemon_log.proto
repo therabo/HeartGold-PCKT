@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.summary.battle_logs;
+
+import "lettuce/battle_engine/schema/origin_card.proto";
+
+message ApplyContinuousEffectToPokemonLog {
+  lettuce.battle_engine.schema.OriginCard card = 1;
+  lettuce.battle_engine.schema.OriginCard cause_card = 2;
+}
+
+

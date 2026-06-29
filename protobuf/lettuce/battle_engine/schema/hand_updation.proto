@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/card_repeated_updation.proto";
+import "lettuce/battle_engine/schema/inferable_hidden_cards_updation.proto";
+
+message HandUpdation {
+  repeated CardRepeatedUpdation cards = 1;
+  InferableHiddenCardsUpdation inferable_cards = 2;
+}
+
+

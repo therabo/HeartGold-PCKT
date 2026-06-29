@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/draw_card_result_type.proto";
+
+message HiddenDrawCardFromLibraryCommandResponse {
+  int32 count = 1;
+  DrawCardResultType draw_card_result_type = 2;
+}
+
+

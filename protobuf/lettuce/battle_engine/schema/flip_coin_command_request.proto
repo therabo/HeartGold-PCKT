@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/continuous_effect_instance_id.proto";
+import "lettuce/battle_engine/schema/flip_coin_flip_type.proto";
+import "lettuce/battle_engine/schema/logic_specifier.proto";
+import "lettuce/battle_engine/schema/player_id.proto";
+
+message FlipCoinCommandRequest {
+  PlayerId player_id = 1;
+  FlipCoinFlipType flip_type = 2;
+  int32 count = 3;
+  LogicSpecifier applier_logic = 4;
+  ContinuousEffectInstanceId effect = 5;
+}
+
+

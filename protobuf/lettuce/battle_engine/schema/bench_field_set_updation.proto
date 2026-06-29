@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/card_id_updation.proto";
+
+message BenchFieldSetUpdation {
+  optional int32 position = 1;
+  CardIdUpdation card_id = 2;
+}
+
+

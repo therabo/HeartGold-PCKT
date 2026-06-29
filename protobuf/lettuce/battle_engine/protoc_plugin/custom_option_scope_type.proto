@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.protoc_plugin;
+
+enum CustomOptionScopeType {
+  CUSTOM_OPTION_SCOPE_TYPE_SCOPE_UNSPECIFIED = 0;
+  CUSTOM_OPTION_SCOPE_TYPE_SCOPE_GLOBAL = 1;
+  CUSTOM_OPTION_SCOPE_TYPE_SCOPE_INTACT = 2;
+  CUSTOM_OPTION_SCOPE_TYPE_SCOPE_HIDDEN = 3;
+}
+

@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/failed_one_shot_effect_notice.proto";
+
+message OneShotEffectApplySpecificationResult {
+  bool is_satisfied = 1;
+  repeated FailedOneShotEffectNotice notices = 2;
+}
+
+

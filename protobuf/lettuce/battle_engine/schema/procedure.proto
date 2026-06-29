@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/knocked_out_check_info.proto";
+import "lettuce/battle_engine/schema/procedure_state.proto";
+import "lettuce/battle_engine/schema/procedure_type.proto";
+
+message Procedure {
+  ProcedureType procedure_type = 1;
+  ProcedureState procedure_state = 2;
+  KnockedOutCheckInfo knocked_out_check_info = 3;
+}
+
+

@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+message BoolValueRepeatedUpdation {
+  int32 index = 1;
+  oneof operation {
+    bool add = 2;
+    bool updation = 3;
+    bool removed = 4;
+  }
+}
+
+

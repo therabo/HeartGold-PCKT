@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/card.proto";
+import "lettuce/battle_engine/schema/card_id.proto";
+import "lettuce/battle_engine/schema/energy_type.proto";
+import "lettuce/battle_engine/schema/prize_amount.proto";
+
+message KnockedOutPokemon {
+  repeated CardId discarded_cards = 2;
+  PrizeAmount added_prize = 3;
+  bool is_active_pokemon = 4;
+  EnergyType knocked_out_by_attack_type = 5;
+  Card knocked_out_by_card = 6;
+  Card knocked_out_pokemon_card = 7;
+  repeated Card return_cards_to_hand = 8;
+}
+
+

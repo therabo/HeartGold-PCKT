@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/evolution_stage.proto";
+import "lettuce/battle_engine/schema/player_id.proto";
+
+message PlayStageSpecifiedPokemonToBenchRandomlyFromLibraryCommandRequest {
+  PlayerId player = 1;
+  EvolutionStage stage = 2;
+  int32 count = 3;
+}
+
+

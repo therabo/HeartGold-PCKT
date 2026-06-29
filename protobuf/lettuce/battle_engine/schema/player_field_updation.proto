@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/active_field_updation.proto";
+import "lettuce/battle_engine/schema/bench_field_repeated_updation.proto";
+import "lettuce/battle_engine/schema/player_id_updation.proto";
+
+message PlayerFieldUpdation {
+  PlayerIdUpdation owner_id = 1;
+  ActiveFieldUpdation active_field = 2;
+  repeated BenchFieldRepeatedUpdation bench_fields = 3;
+}
+
+

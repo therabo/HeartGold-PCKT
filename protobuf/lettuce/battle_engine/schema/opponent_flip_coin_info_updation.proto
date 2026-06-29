@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/flip_coin_flip_type_enum_updation.proto";
+import "lettuce/battle_engine/schema/flip_coin_reservation_updation.proto";
+
+message OpponentFlipCoinInfoUpdation {
+  optional int32 flip_count = 1;
+  FlipCoinFlipTypeEnumUpdation flip_type = 2;
+  FlipCoinReservationUpdation reservation = 3;
+}
+
+

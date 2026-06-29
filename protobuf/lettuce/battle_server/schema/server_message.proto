@@ -1,0 +1,90 @@
+syntax = "proto3";
+
+package lettuce.battle_server.schema;
+
+import "lettuce/battle_engine/schema/action.proto";
+import "lettuce/battle_engine/schema/game.proto";
+import "lettuce/battle_engine/schema/game_progress.proto";
+import "lettuce/battle_engine/schema/game_record.proto";
+import "lettuce/battle_engine/schema/hidden_game.proto";
+import "lettuce/battle_engine/schema/next_action_info.proto";
+import "lettuce/battle_engine/schema/player_id.proto";
+import "lettuce/battle_engine/summary/battle_logs/battle_log.proto";
+import "lettuce/battle_server/schema/remaining_time.proto";
+
+message ServerMessage {
+  message Types {
+    message LoginResult {
+      message Types {
+        enum StatusCode {
+          STATUS_CODE_OK = 0;
+          STATUS_CODE_ALREADY_JOINED = 1;
+          STATUS_CODE_INVALIDATED_BATTLE = 2;
+        }
+      }
+      ServerMessage.Types.LoginResult.Types.StatusCode status_code = 1;
+      string resume_token = 2;
+    }
+    message InitialData {
+      message Types {
+        message Debug {
+          lettuce.battle_engine.schema.Game game = 1;
+        }
+      }
+      lettuce.battle_engine.schema.HiddenGame hidden_game = 1;
+      lettuce.battle_engine.schema.NextActionInfo next_action_info = 2;
+      repeated lettuce.battle_engine.schema.GameProgress game_progresses = 3;
+      RemainingTime remaining_time = 4;
+      repeated lettuce.battle_engine.summary.battle_logs.BattleLog battle_logs = 5;
+      fixed32 last_game_progress_id = 6;
+      ServerMessage.Types.InitialData.Types.Debug debug = 7;
+    }
+    message GameStart {
+      RemainingTime remaining_time = 4;
+    }
+    message ActionResult {
+      message Types {
+        enum StatusCode {
+          STATUS_CODE_OK = 0;
+          STATUS_CODE_INVALID = 1;
+        }
+      }
+      ServerMessage.Types.ActionResult.Types.StatusCode status_code = 1;
+    }
+    message GameProgress {
+      message Types {
+        message Debug {
+          repeated lettuce.battle_engine.schema.Action actions = 1;
+        }
+      }
+      lettuce.battle_engine.schema.NextActionInfo next_action_info = 1;
+      repeated lettuce.battle_engine.schema.GameProgress game_progresses = 2;
+      RemainingTime remaining_time = 3;
+      fixed32 last_game_progress_id = 4;
+      ServerMessage.Types.GameProgress.Types.Debug debug = 5;
+    }
+    message BattleResult {
+      string battle_report = 1;
+      lettuce.battle_engine.schema.GameRecord game_record = 2;
+      string winner_app_player_id = 3;
+    }
+    message Disconnected {
+      lettuce.battle_engine.schema.PlayerId battle_player_id = 1;
+    }
+    message Reconnected {
+      lettuce.battle_engine.schema.PlayerId battle_player_id = 1;
+    }
+  }
+  oneof data {
+    ServerMessage.Types.LoginResult login_result = 1;
+    ServerMessage.Types.InitialData initial_data = 2;
+    ServerMessage.Types.GameStart game_start = 3;
+    ServerMessage.Types.ActionResult action_result = 4;
+    ServerMessage.Types.GameProgress game_progress = 5;
+    ServerMessage.Types.BattleResult battle_result = 6;
+    ServerMessage.Types.Disconnected disconnected = 7;
+    ServerMessage.Types.Reconnected reconnected = 8;
+  }
+}
+
+

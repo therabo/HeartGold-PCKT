@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/battle_object_id_updation.proto";
+
+message KnockedOutCheckInfoUpdation {
+  BattleObjectIdUpdation player1_next_active = 1;
+  BattleObjectIdUpdation player2_next_active = 2;
+}
+
+

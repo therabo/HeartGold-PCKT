@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/battle_object_id.proto";
+import "lettuce/battle_engine/schema/card_name.proto";
+import "lettuce/battle_engine/schema/energy_type.proto";
+import "lettuce/battle_engine/schema/evolution_stage.proto";
+
+message OneShotEffectApplySpecificationReasonParameter {
+  bool has_int_value = 1;
+  int32 int_value = 2;
+  EnergyType energy_type_value = 3;
+  CardName card_name_value = 4;
+  string string_value = 5;
+  EvolutionStage stage_value = 6;
+  BattleObjectId pokemon_id = 7;
+}
+
+

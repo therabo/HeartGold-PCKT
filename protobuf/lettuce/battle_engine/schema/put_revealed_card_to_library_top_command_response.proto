@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/card.proto";
+
+message PutRevealedCardToLibraryTopCommandResponse {
+  repeated Card put_cards = 1;
+}
+
+

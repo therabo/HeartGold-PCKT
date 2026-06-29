@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/effect/continuous_effect.proto";
+
+message UpdateContinuousEffectCommandRequest {
+  lettuce.battle_engine.schema.effect.ContinuousEffect effect = 1;
+}
+
+

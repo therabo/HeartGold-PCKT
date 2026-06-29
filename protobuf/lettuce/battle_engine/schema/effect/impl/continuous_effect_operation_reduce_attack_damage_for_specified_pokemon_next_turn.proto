@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema.effect.impl;
+
+import "lettuce/battle_engine/schema/card_name.proto";
+import "lettuce/battle_engine/schema/damage_amount.proto";
+import "lettuce/battle_engine/schema/player_id.proto";
+
+message ContinuousEffectOperation_ReduceAttackDamageForSpecifiedPokemonNextTurn {
+  lettuce.battle_engine.schema.DamageAmount reduce_amount = 1;
+  lettuce.battle_engine.schema.PlayerId player = 2;
+  int32 applied_turn = 3;
+  lettuce.battle_engine.schema.CardName name1 = 4;
+  lettuce.battle_engine.schema.CardName name2 = 5;
+}
+
+

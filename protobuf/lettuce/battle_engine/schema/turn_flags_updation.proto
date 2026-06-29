@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/card_id_updation.proto";
+
+message TurnFlagsUpdation {
+  optional bool retreated = 1;
+  CardIdUpdation used_support = 2;
+  optional bool determined_attack = 3;
+}
+
+

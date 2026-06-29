@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema.logic;
+
+import "lettuce/battle_engine/schema/logic/triggered_logic_info.proto";
+import "lettuce/battle_engine/schema/logic/triggered_logic_info_updation.proto";
+
+message TriggeredLogicInfoRepeatedUpdation {
+  int32 index = 1;
+  oneof operation {
+    TriggeredLogicInfo add = 2;
+    TriggeredLogicInfoUpdation updation = 3;
+    bool removed = 4;
+  }
+}
+
+

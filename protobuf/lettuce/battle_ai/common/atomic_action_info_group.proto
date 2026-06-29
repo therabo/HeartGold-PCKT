@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package lettuce.battle_ai.common;
+
+import "lettuce/battle_ai/common/atomic_action_info.proto";
+
+message AtomicActionInfoGroup {
+  repeated AtomicActionInfo atomic_action_info_list = 1;
+}
+
+

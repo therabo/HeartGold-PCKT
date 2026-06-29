@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema.effect.impl;
+
+import "lettuce/battle_engine/schema/card_name.proto";
+import "lettuce/battle_engine/schema/energy_pair.proto";
+import "lettuce/battle_engine/schema/player_id.proto";
+
+message ContinuousEffectOperation_ReduceEnergyToAttackThisTurnBySpecifyingNamesAndEnergyTypes {
+  lettuce.battle_engine.schema.PlayerId target = 1;
+  int32 applied_turn = 2;
+  repeated lettuce.battle_engine.schema.CardName names = 3;
+  repeated lettuce.battle_engine.schema.EnergyPair energy_pairs = 4;
+}
+
+

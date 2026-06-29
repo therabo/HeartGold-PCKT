@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/attach_energy_by_effect_action_candidate.proto";
+import "lettuce/battle_engine/schema/energy_set.proto";
+
+message AttachEnergyByEffectActionHint {
+  repeated AttachEnergyByEffectActionCandidate candidates = 1;
+  EnergySet energies = 2;
+}
+
+

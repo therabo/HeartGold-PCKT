@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/inferable_hidden_cards.proto";
+import "lettuce/battle_engine/schema/inferable_ordered_hidden_cards.proto";
+
+message HiddenLibrary {
+  int32 count = 1;
+  InferableOrderedHiddenCards inferable_self_ordered_cards = 2;
+  InferableOrderedHiddenCards inferable_opponent_ordered_cards = 3;
+  InferableHiddenCards inferable_opponent_unordered_cards = 4;
+}
+
+

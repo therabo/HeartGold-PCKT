@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema.effect.impl;
+
+import "lettuce/battle_engine/schema/battle_object_id_updation.proto";
+import "lettuce/battle_engine/schema/special_condition_type_enum_updation.proto";
+
+message ContinuousEffectOperation_PreventSpecifiedSpecialConditionForThisPokemonUpdation {
+  lettuce.battle_engine.schema.BattleObjectIdUpdation target = 1;
+  lettuce.battle_engine.schema.SpecialConditionTypeEnumUpdation type = 2;
+}
+
+

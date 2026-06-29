@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/card.proto";
+import "lettuce/battle_engine/schema/player_id.proto";
+
+message LibraryRevealment {
+  repeated Card cards = 1;
+  repeated PlayerId viewer_player_ids = 2;
+}
+
+

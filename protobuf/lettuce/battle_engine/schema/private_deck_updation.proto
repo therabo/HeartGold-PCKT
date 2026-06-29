@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/deck_supply_updation.proto";
+import "lettuce/battle_engine/schema/energy_type_enum_repeated_updation.proto";
+
+message PrivateDeckUpdation {
+  repeated EnergyTypeEnumRepeatedUpdation energy_types = 2;
+  DeckSupplyUpdation supply = 3;
+}
+
+

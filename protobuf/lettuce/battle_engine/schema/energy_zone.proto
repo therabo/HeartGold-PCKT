@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/energy_type.proto";
+
+message EnergyZone {
+  EnergyType active = 1;
+  EnergyType inactive = 2;
+}
+
+

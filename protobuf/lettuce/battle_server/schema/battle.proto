@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package lettuce.battle_server.schema;
+
+import "lettuce/battle_server/schema/client_message.proto";
+import "lettuce/battle_server/schema/server_message.proto";
+
+service Battle {
+  rpc Connect (stream ClientMessage) returns (stream ServerMessage);
+}
+

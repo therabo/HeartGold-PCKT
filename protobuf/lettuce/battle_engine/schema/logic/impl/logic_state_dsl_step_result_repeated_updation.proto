@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema.logic.impl;
+
+import "lettuce/battle_engine/schema/logic/impl/logic_state_dsl_step_result.proto";
+import "lettuce/battle_engine/schema/logic/impl/logic_state_dsl_step_result_updation.proto";
+
+message LogicState_DslStepResultRepeatedUpdation {
+  int32 index = 1;
+  oneof operation {
+    LogicState_DslStepResult add = 2;
+    LogicState_DslStepResultUpdation updation = 3;
+    bool removed = 4;
+  }
+}
+
+

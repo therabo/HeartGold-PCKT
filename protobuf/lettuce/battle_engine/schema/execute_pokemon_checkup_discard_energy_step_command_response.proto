@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/energy_type.proto";
+import "lettuce/battle_engine/schema/player_id.proto";
+
+message ExecutePokemonCheckupDiscardEnergyStepCommandResponse {
+  PlayerId turn_player_id = 1;
+  EnergyType discarded = 2;
+}
+
+

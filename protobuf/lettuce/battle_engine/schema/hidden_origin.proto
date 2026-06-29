@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/hidden_match.proto";
+import "lettuce/battle_engine/schema/hidden_random_specification.proto";
+import "lettuce/battle_engine/schema/regulation.proto";
+
+message HiddenOrigin {
+  HiddenMatch match = 1;
+  Regulation regulation = 2;
+  HiddenRandomSpecification random = 3;
+}
+
+

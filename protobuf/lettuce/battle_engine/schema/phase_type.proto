@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+enum PhaseType {
+  PHASE_TYPE_UNSPECIFIED = 0;
+  PHASE_TYPE_START_PHASE = 100;
+  PHASE_TYPE_ACTION_PHASE = 200;
+  PHASE_TYPE_ATTACK_PHASE = 300;
+  PHASE_TYPE_END_PHASE = 400;
+  PHASE_TYPE_POKEMON_CHECKUP = 500;
+}
+

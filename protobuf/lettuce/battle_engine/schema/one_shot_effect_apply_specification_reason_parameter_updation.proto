@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/battle_object_id_updation.proto";
+import "lettuce/battle_engine/schema/card_name_updation.proto";
+import "lettuce/battle_engine/schema/energy_type_enum_updation.proto";
+import "lettuce/battle_engine/schema/evolution_stage_enum_updation.proto";
+
+message OneShotEffectApplySpecificationReasonParameterUpdation {
+  optional bool has_int_value = 1;
+  optional int32 int_value = 2;
+  EnergyTypeEnumUpdation energy_type_value = 3;
+  CardNameUpdation card_name_value = 4;
+  string string_value = 5;
+  EvolutionStageEnumUpdation stage_value = 6;
+  BattleObjectIdUpdation pokemon_id = 7;
+}
+
+

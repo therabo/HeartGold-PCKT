@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema.logic.impl;
+
+import "lettuce/battle_engine/schema/logic/impl/logic_state_common_parameter.proto";
+import "lettuce/battle_engine/schema/logic/impl/logic_state_common_parameter_updation.proto";
+
+message LogicState_CommonParameterRepeatedUpdation {
+  int32 index = 1;
+  oneof operation {
+    LogicState_CommonParameter add = 2;
+    LogicState_CommonParameterUpdation updation = 3;
+    bool removed = 4;
+  }
+}
+
+

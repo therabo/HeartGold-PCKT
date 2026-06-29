@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/action_phase_info_updation.proto";
+import "lettuce/battle_engine/schema/phase_state_enum_updation.proto";
+import "lettuce/battle_engine/schema/phase_type_enum_updation.proto";
+import "lettuce/battle_engine/schema/step_updation.proto";
+
+message PhaseUpdation {
+  PhaseTypeEnumUpdation phase_type = 1;
+  PhaseStateEnumUpdation phase_state = 2;
+  StepUpdation step = 3;
+  ActionPhaseInfoUpdation action_phase_info = 4;
+}
+
+

@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/evolution_stage.proto";
+
+message EvolutionStageEnumUpdation {
+  EvolutionStage value = 1;
+}
+
+

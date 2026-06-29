@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema.logic.impl;
+
+enum LogicState_DslStepResult_Type {
+  LOGIC_STATE_DSL_STEP_RESULT_TYPE_UNSPECIFIED = 0;
+  LOGIC_STATE_DSL_STEP_RESULT_TYPE_BOOL = 1;
+  LOGIC_STATE_DSL_STEP_RESULT_TYPE_LONG = 2;
+  LOGIC_STATE_DSL_STEP_RESULT_TYPE_STRING = 3;
+}
+

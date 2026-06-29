@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema.effect.impl;
+
+import "lettuce/battle_engine/schema/damage_amount.proto";
+import "lettuce/battle_engine/schema/player_id.proto";
+
+message ContinuousEffectOperation_ReduceAttackDamageFromOpponentNextTurn {
+  lettuce.battle_engine.schema.DamageAmount reduce_amount = 1;
+  int32 applied_turn = 2;
+  lettuce.battle_engine.schema.PlayerId target = 3;
+}
+
+

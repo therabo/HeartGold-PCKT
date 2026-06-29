@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema.effect;
+
+import "lettuce/battle_engine/schema/effect/continuous_effect.proto";
+import "lettuce/battle_engine/schema/effect/continuous_effect_updation.proto";
+
+message ContinuousEffectRepeatedUpdation {
+  int32 index = 1;
+  oneof operation {
+    ContinuousEffect add = 2;
+    ContinuousEffectUpdation updation = 3;
+    bool removed = 4;
+  }
+}
+
+

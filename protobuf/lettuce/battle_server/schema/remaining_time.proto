@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package lettuce.battle_server.schema;
+
+import "google/protobuf/duration.proto";
+
+message RemainingTime {
+  google.protobuf.Duration player1_total = 1;
+  google.protobuf.Duration player1_action = 2;
+  google.protobuf.Duration player2_total = 3;
+  google.protobuf.Duration player2_action = 4;
+}
+
+

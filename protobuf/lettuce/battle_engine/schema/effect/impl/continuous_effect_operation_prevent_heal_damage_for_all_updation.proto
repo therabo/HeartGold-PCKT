@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema.effect.impl;
+
+import "lettuce/battle_engine/schema/player_id_repeated_updation.proto";
+
+message ContinuousEffectOperation_PreventHealDamageForAllUpdation {
+  repeated lettuce.battle_engine.schema.PlayerIdRepeatedUpdation targets = 1;
+}
+
+

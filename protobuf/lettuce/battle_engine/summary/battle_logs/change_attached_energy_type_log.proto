@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.summary.battle_logs;
+
+import "lettuce/battle_engine/schema/energy_type.proto";
+import "lettuce/battle_engine/schema/origin_card.proto";
+
+message ChangeAttachedEnergyTypeLog {
+  lettuce.battle_engine.schema.OriginCard card = 1;
+  lettuce.battle_engine.schema.EnergyType before_energy_type = 2;
+  lettuce.battle_engine.schema.EnergyType after_energy_type = 3;
+}
+
+

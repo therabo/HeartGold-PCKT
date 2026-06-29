@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema.logic.impl;
+
+import "lettuce/battle_engine/schema/player_id_updation.proto";
+
+message LogicState_SelectPlayerUpdation {
+  lettuce.battle_engine.schema.PlayerIdUpdation player_id = 1;
+}
+
+

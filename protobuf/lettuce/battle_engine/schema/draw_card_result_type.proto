@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+enum DrawCardResultType {
+  DRAW_CARD_RESULT_TYPE_UNSPECIFIED = 0;
+  DRAW_CARD_RESULT_TYPE_SUCCESS = 1;
+  DRAW_CARD_RESULT_TYPE_HAND_CARD_IS_FULL = 2;
+  DRAW_CARD_RESULT_TYPE_LIBRARY_IS_EMPTY = 3;
+}
+

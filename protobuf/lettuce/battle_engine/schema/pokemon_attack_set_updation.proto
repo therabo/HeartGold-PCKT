@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/battle_object_id_updation.proto";
+import "lettuce/battle_engine/schema/master_card_id_updation.proto";
+import "lettuce/battle_engine/schema/pokemon_attack_id_repeated_updation.proto";
+
+message PokemonAttackSetUpdation {
+  BattleObjectIdUpdation pokemon = 1;
+  repeated PokemonAttackIdRepeatedUpdation attacks = 2;
+  MasterCardIdUpdation master_card_id = 3;
+}
+
+

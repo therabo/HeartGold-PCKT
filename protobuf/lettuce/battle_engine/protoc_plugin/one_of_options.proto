@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.protoc_plugin;
+
+message OneOfOptions {
+  string cs_type = 1;
+  string cs_namespace = 2;
+}
+
+

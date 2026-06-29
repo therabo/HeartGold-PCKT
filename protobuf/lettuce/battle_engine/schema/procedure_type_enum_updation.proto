@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/procedure_type.proto";
+
+message ProcedureTypeEnumUpdation {
+  ProcedureType value = 1;
+}
+
+

@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/battle_object_id.proto";
+
+message ReserveKnockOutCommandResponse {
+  bool is_prevented = 1;
+  BattleObjectId target = 2;
+}
+
+

@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/card.proto";
+
+message HiddenShuffleHandsIntoLibraryCommandResponse {
+  repeated Card self_cards = 1;
+  bool is_self_shuffled = 2;
+  int32 opponent_count = 3;
+  bool is_opponent_shuffled = 4;
+  bool is_used_by_self = 5;
+}
+
+

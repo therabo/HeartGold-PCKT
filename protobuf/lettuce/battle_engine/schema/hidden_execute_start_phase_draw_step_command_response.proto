@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/draw_card_result_type.proto";
+
+message HiddenExecuteStartPhaseDrawStepCommandResponse {
+  DrawCardResultType draw_card_result_type = 1;
+  int32 draw_count = 2;
+}
+
+

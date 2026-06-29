@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/discard_pile_updation.proto";
+import "lettuce/battle_engine/schema/energy_zone_updation.proto";
+import "lettuce/battle_engine/schema/hidden_hand_revealment_updation.proto";
+import "lettuce/battle_engine/schema/hidden_hand_updation.proto";
+import "lettuce/battle_engine/schema/hidden_library_revealment_updation.proto";
+import "lettuce/battle_engine/schema/hidden_library_updation.proto";
+import "lettuce/battle_engine/schema/inferable_hidden_cards_updation.proto";
+import "lettuce/battle_engine/schema/player_flags_updation.proto";
+import "lettuce/battle_engine/schema/player_id_updation.proto";
+import "lettuce/battle_engine/schema/prize_amount_updation.proto";
+
+message HiddenPlayerUpdation {
+  PlayerIdUpdation id = 1;
+  HiddenHandUpdation hand = 2;
+  HiddenLibraryUpdation library = 3;
+  DiscardPileUpdation discard_pile = 4;
+  EnergyZoneUpdation energy_zone = 5;
+  PrizeAmountUpdation prize = 6;
+  HiddenLibraryRevealmentUpdation library_revealment = 7;
+  HiddenHandRevealmentUpdation hand_revealment = 8;
+  PlayerFlagsUpdation flags = 9;
+  InferableHiddenCardsUpdation inferable_nondeterministic_cards = 10;
+}
+
+

@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/card_id.proto";
+import "lettuce/battle_engine/schema/continuous_effect_instance_id.proto";
+import "lettuce/battle_engine/schema/special_condition_recovery.proto";
+
+message EvolvePokemonCommandResponse {
+  CardId evolved_from_pokemon_card = 1;
+  repeated SpecialConditionRecovery recoveries = 2;
+  repeated ContinuousEffectInstanceId applied_effects = 3;
+}
+
+

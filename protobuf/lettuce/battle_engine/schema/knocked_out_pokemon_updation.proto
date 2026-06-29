@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/card_id_repeated_updation.proto";
+import "lettuce/battle_engine/schema/card_repeated_updation.proto";
+import "lettuce/battle_engine/schema/card_updation.proto";
+import "lettuce/battle_engine/schema/energy_type_enum_updation.proto";
+import "lettuce/battle_engine/schema/prize_amount_updation.proto";
+
+message KnockedOutPokemonUpdation {
+  repeated CardIdRepeatedUpdation discarded_cards = 2;
+  PrizeAmountUpdation added_prize = 3;
+  optional bool is_active_pokemon = 4;
+  EnergyTypeEnumUpdation knocked_out_by_attack_type = 5;
+  CardUpdation knocked_out_by_card = 6;
+  CardUpdation knocked_out_pokemon_card = 7;
+  repeated CardRepeatedUpdation return_cards_to_hand = 8;
+}
+
+

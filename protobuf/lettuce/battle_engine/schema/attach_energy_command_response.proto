@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/energy_attach_response.proto";
+import "lettuce/battle_engine/schema/energy_set.proto";
+
+message AttachEnergyCommandResponse {
+  repeated EnergyAttachResponse response = 1;
+  EnergySet remaining_energy = 2;
+}
+
+

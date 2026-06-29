@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package lettuce.battle_ai.common;
+
+import "lettuce/battle_engine/schema/action_type.proto";
+import "lettuce/battle_engine/schema/battle_object_id.proto";
+import "lettuce/battle_engine/schema/card_id.proto";
+import "lettuce/battle_engine/schema/energy_pair.proto";
+import "lettuce/battle_engine/schema/energy_type.proto";
+import "lettuce/battle_engine/schema/master_card_id.proto";
+import "lettuce/battle_engine/schema/player_id.proto";
+import "lettuce/battle_engine/schema/pokemon_attack_id.proto";
+
+message AtomicAction {
+  oneof atomicaction {
+    lettuce.battle_engine.schema.ActionType action_type = 1;
+    lettuce.battle_engine.schema.CardId card_id = 2;
+    lettuce.battle_engine.schema.EnergyType energy_type = 3;
+    lettuce.battle_engine.schema.EnergyPair energy_pair = 4;
+    lettuce.battle_engine.schema.PlayerId player_id = 5;
+    lettuce.battle_engine.schema.BattleObjectId battle_object_id = 6;
+    lettuce.battle_engine.schema.PokemonAttackId pokemon_attack_id = 7;
+    lettuce.battle_engine.schema.MasterCardId master_card_id = 8;
+    bool choice = 9;
+    int32 position = 10;
+    int32 index = 11;
+  }
+}
+
+

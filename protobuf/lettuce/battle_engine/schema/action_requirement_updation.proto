@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/expected_action_repeated_updation.proto";
+import "lettuce/battle_engine/schema/logic_specifier_updation.proto";
+
+message ActionRequirementUpdation {
+  repeated ExpectedActionRepeatedUpdation expected_actions = 1;
+  optional int32 action_requirement_id = 2;
+  optional int32 action_required_count_in_this_turn = 3;
+  LogicSpecifierUpdation cause_logic = 4;
+}
+
+

@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/attack_damage_applied_result_updation.proto";
+import "lettuce/battle_engine/schema/attack_damage_calculation_result_updation.proto";
+import "lettuce/battle_engine/schema/damage_amount_updation.proto";
+import "lettuce/battle_engine/schema/extra_attack_order_repeated_updation.proto";
+import "lettuce/battle_engine/schema/original_attack_damage_override_updation.proto";
+import "lettuce/battle_engine/schema/public_basic_attack_damage_updation.proto";
+
+message AttackDamageCalculationStepInfoUpdation {
+  PublicBasicAttackDamageUpdation public_basic_damage = 1;
+  DamageAmountUpdation plus_damage_amount = 2;
+  optional bool ignores_weakness = 3;
+  optional bool ignores_resistance = 4;
+  optional bool ignores_attacker_effects = 5;
+  optional bool ignores_defender_effects = 6;
+  OriginalAttackDamageOverrideUpdation original_attack_damage_override = 7;
+  optional bool is_calculation_fixed = 8;
+  repeated ExtraAttackOrderRepeatedUpdation extra_attacks = 9;
+  AttackDamageCalculationResultUpdation calculation_result = 10;
+  AttackDamageAppliedResultUpdation applied_result = 12;
+  optional bool skips_damage_step = 13;
+}
+
+

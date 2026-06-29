@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/damage_amount_updation.proto";
+
+message OriginalAttackDamageOverrideUpdation {
+  optional bool should_override = 1;
+  DamageAmountUpdation override_value = 2;
+}
+
+

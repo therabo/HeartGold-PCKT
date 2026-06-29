@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/heal_request.proto";
+import "lettuce/battle_engine/schema/logic_specifier.proto";
+import "lettuce/battle_engine/schema/player_id.proto";
+
+message ApplyHealDamageCommandRequest {
+  PlayerId applier = 1;
+  LogicSpecifier applier_logic = 2;
+  repeated HealRequest heal_targets = 3;
+}
+
+

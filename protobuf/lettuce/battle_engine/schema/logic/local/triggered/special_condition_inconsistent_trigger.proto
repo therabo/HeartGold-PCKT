@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema.logic.local.triggered;
+
+import "lettuce/battle_engine/schema/battle_object_id.proto";
+
+message SpecialConditionInconsistentTrigger {
+  lettuce.battle_engine.schema.BattleObjectId target = 1;
+}
+
+

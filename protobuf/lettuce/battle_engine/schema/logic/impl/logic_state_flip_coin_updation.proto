@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema.logic.impl;
+
+import "lettuce/battle_engine/schema/logic/impl/logic_state_flip_coin_step_enum_updation.proto";
+
+message LogicState_FlipCoinUpdation {
+  LogicState_FlipCoin_StepEnumUpdation step = 1;
+  optional int32 head_count = 3;
+}
+
+

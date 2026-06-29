@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/battle_object_id_updation.proto";
+import "lettuce/battle_engine/schema/damage_amount_updation.proto";
+
+message ExtraAttackCalculationResultUpdation {
+  BattleObjectIdUpdation target = 1;
+  DamageAmountUpdation damage = 2;
+  optional bool is_weakness = 3;
+  optional bool is_resisted = 4;
+  optional int32 effect_delta = 5;
+}
+
+

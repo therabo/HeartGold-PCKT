@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema.effect.impl;
+
+import "lettuce/battle_engine/schema/battle_object_id.proto";
+import "lettuce/battle_engine/schema/damage_amount.proto";
+import "lettuce/battle_engine/schema/pokemon_attack_name.proto";
+
+message ContinuousEffectOperation_AddAttackDamageMultipliedByAppliedCount {
+  lettuce.battle_engine.schema.BattleObjectId target = 1;
+  lettuce.battle_engine.schema.PokemonAttackName attack = 2;
+  lettuce.battle_engine.schema.DamageAmount add_amount = 3;
+  int32 multiplier = 4;
+}
+
+

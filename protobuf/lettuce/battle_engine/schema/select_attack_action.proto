@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/master_card_id.proto";
+import "lettuce/battle_engine/schema/pokemon_attack_id.proto";
+
+message SelectAttackAction {
+  PokemonAttackId attack_id = 1;
+  MasterCardId master_card_id = 2;
+}
+
+

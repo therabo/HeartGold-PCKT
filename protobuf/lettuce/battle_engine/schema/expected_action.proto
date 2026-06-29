@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/action_type.proto";
+import "lettuce/battle_engine/schema/player_id.proto";
+
+message ExpectedAction {
+  PlayerId player_id = 1;
+  repeated ActionType action_types = 2;
+}
+
+

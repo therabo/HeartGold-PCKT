@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema.logic.impl;
+
+import "lettuce/battle_engine/schema/energy_set_updation.proto";
+import "lettuce/battle_engine/schema/logic/impl/logic_state_common_parameter_type_enum_updation.proto";
+
+message LogicState_CommonParameterUpdation {
+  string key = 1;
+  LogicState_CommonParameter_TypeEnumUpdation type = 2;
+  optional bool bool_value = 3;
+  optional int64 long_value = 4;
+  string string_value = 5;
+  lettuce.battle_engine.schema.EnergySetUpdation energy_set_value = 6;
+}
+
+

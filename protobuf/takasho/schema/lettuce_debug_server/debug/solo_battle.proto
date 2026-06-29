@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package takasho.schema.lettuce_debug_server.debug;
+
+import "takasho/schema/lettuce_debug_server/debug/solo_battle_add_event_power.proto";
+
+service SoloBattle {
+  rpc AddEventPower (SoloBattleAddEventPower.Types.Request) returns (SoloBattleAddEventPower.Types.Response);
+}
+

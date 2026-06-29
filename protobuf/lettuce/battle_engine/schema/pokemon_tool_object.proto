@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/battle_object_id.proto";
+import "lettuce/battle_engine/schema/card.proto";
+import "lettuce/battle_engine/schema/player_id.proto";
+
+message PokemonToolObject {
+  BattleObjectId id = 1;
+  PlayerId controller = 2;
+  repeated Card cards = 3;
+}
+
+

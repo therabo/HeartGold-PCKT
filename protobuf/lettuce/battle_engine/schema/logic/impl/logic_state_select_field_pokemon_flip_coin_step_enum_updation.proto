@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema.logic.impl;
+
+import "lettuce/battle_engine/schema/logic/impl/logic_state_select_field_pokemon_flip_coin_step.proto";
+
+message LogicState_SelectFieldPokemonFlipCoin_StepEnumUpdation {
+  LogicState_SelectFieldPokemonFlipCoin_Step value = 1;
+}
+
+

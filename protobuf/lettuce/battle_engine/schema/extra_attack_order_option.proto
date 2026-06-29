@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+message ExtraAttackOrderOption {
+  bool calculates_weakness = 1;
+  bool calculates_resistance = 2;
+  bool calculates_attacker_effects = 3;
+  bool calculates_defender_effects = 4;
+}
+
+

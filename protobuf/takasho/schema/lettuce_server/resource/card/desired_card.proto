@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package takasho.schema.lettuce_server.resource.card;
+
+message DesiredCard {
+  string card_id = 1;
+  fixed64 display_order = 2;
+  fixed64 profile_order = 3;
+}
+
+

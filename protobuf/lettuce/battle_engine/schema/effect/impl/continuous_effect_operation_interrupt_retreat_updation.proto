@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema.effect.impl;
+
+import "lettuce/battle_engine/schema/battle_object_id_updation.proto";
+
+message ContinuousEffectOperation_InterruptRetreatUpdation {
+  lettuce.battle_engine.schema.BattleObjectIdUpdation target = 1;
+  optional int32 applied_turn = 2;
+}
+
+

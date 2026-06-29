@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/energy_set.proto";
+
+message ReplaceAttachedEnergiesRandomlyCommandResponse {
+  bool is_prevented = 1;
+  EnergySet replaced_energies = 2;
+  EnergySet attached_energies = 3;
+}
+
+

@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/hidden_player_field.proto";
+
+message HiddenField {
+  HiddenPlayerField player1_field = 1;
+  HiddenPlayerField player2_field = 2;
+}
+
+

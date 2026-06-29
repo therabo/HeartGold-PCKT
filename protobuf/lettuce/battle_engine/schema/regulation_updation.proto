@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/player_id_updation.proto";
+import "lettuce/battle_engine/schema/prize_regulation_updation.proto";
+
+message RegulationUpdation {
+  optional int32 final_turn_number = 1;
+  PrizeRegulationUpdation prize = 2;
+  PlayerIdUpdation first_turn_player = 3;
+  optional bool skip_prepare_library = 4;
+  optional bool skip_prepare_field = 5;
+  optional bool skip_prepare_hand = 6;
+}
+
+

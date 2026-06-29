@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema.effect.impl;
+
+import "lettuce/battle_engine/schema/damage_amount.proto";
+import "lettuce/battle_engine/schema/energy_type.proto";
+import "lettuce/battle_engine/schema/player_id.proto";
+
+message ContinuousEffectOperation_AddAttackDamageToActiveByType {
+  lettuce.battle_engine.schema.DamageAmount add_amount = 1;
+  lettuce.battle_engine.schema.PlayerId target = 2;
+  lettuce.battle_engine.schema.EnergyType type = 3;
+}
+
+

@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/card_id.proto";
+import "lettuce/battle_engine/schema/player_id.proto";
+
+message HiddenDrawCardFromLibraryCommandRequest {
+  PlayerId player_id = 1;
+  CardId invocator_card = 2;
+  int32 count = 3;
+}
+
+

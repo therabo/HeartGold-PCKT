@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/damage_amount_updation.proto";
+import "lettuce/battle_engine/schema/special_condition_cause_updation.proto";
+import "lettuce/battle_engine/schema/special_condition_type_enum_updation.proto";
+
+message SpecialConditionUpdation {
+  SpecialConditionTypeEnumUpdation type = 1;
+  SpecialConditionCauseUpdation cause = 2;
+  optional int32 applied_turn_number = 3;
+  DamageAmountUpdation override_damage = 4;
+}
+
+

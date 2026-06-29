@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/special_condition_apply_result_entry.proto";
+import "lettuce/battle_engine/schema/special_condition_apply_result_entry_updation.proto";
+
+message SpecialConditionApplyResultEntryRepeatedUpdation {
+  int32 index = 1;
+  oneof operation {
+    SpecialConditionApplyResultEntry add = 2;
+    SpecialConditionApplyResultEntryUpdation updation = 3;
+    bool removed = 4;
+  }
+}
+
+

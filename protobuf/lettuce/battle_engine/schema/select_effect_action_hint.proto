@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/card_id.proto";
+import "lettuce/battle_engine/schema/master_card_id.proto";
+import "lettuce/battle_engine/schema/select_effect_candidate.proto";
+
+message SelectEffectActionHint {
+  repeated SelectEffectCandidate candidates = 1;
+  CardId card_id = 2;
+  MasterCardId owner_card_id = 3;
+}
+
+

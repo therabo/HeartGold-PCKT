@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/pokemon_attack_id_updation.proto";
+
+message ActionPhaseDetermineAttackInfoUpdation {
+  optional bool is_action_on_determine_attack_expected = 1;
+  PokemonAttackIdUpdation action_expected_attack_id = 2;
+}
+
+

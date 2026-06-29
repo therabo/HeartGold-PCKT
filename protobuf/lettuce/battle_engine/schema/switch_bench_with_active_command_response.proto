@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/battle_object_id.proto";
+import "lettuce/battle_engine/schema/continuous_effect_instance_id.proto";
+import "lettuce/battle_engine/schema/special_condition_recovery.proto";
+
+message SwitchBenchWithActiveCommandResponse {
+  BattleObjectId changed_pokemon = 1;
+  repeated SpecialConditionRecovery recoveries = 2;
+  repeated ContinuousEffectInstanceId applied_effects = 3;
+  bool is_prevented = 4;
+  BattleObjectId prevented_pokemon = 5;
+}
+
+

@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/energy_type_enum_updation.proto";
+
+message EnergyPairUpdation {
+  EnergyTypeEnumUpdation type = 1;
+  optional int32 value = 2;
+}
+
+

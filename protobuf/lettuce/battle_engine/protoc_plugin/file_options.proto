@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.protoc_plugin;
+
+import "lettuce/battle_engine/protoc_plugin/custom_option_boolean.proto";
+import "lettuce/battle_engine/protoc_plugin/custom_option_module_id.proto";
+import "lettuce/battle_engine/protoc_plugin/custom_option_scope_type.proto";
+import "lettuce/battle_engine/protoc_plugin/module_default_template.proto";
+import "lettuce/battle_engine/protoc_plugin/template_default_boolean.proto";
+import "lettuce/battle_engine/protoc_plugin/template_default_string.proto";
+
+message FileOptions {
+  CustomOptionScopeType default_scope = 1;
+  CustomOptionModuleId default_module = 11;
+  repeated ModuleDefaultTemplate default_template = 21;
+  repeated TemplateDefaultString default_base = 31;
+  repeated TemplateDefaultBoolean default_cloneable = 41;
+  CustomOptionBoolean default_with_updation = 51;
+}
+
+

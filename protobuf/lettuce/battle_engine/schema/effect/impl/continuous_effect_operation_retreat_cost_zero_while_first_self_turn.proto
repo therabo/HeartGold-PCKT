@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema.effect.impl;
+
+import "lettuce/battle_engine/schema/battle_object_id.proto";
+
+message ContinuousEffectOperation_RetreatCostZeroWhileFirstSelfTurn {
+  lettuce.battle_engine.schema.BattleObjectId target = 1;
+}
+
+

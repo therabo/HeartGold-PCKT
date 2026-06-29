@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+message HiddenExchangeHandCardForLibraryPokemonCommandResponse {
+  int32 hand_card_count = 1;
+  int32 library_card_count = 2;
+  bool is_shuffled_after_card_to_library = 3;
+  bool is_shuffled_at_last = 4;
+}
+
+

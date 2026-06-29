@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package lettuce.battle_ai.common;
+
+import "lettuce/battle_ai/common/candidate_actions.proto";
+import "lettuce/battle_ai/common/ml_ai_parameter_info.proto";
+import "lettuce/battle_engine/schema/turn.proto";
+
+message MlAiInfo {
+  MlAiParameterInfo ml_ai_parameter_info = 1;
+  CandidateActions candidate_actions = 2;
+  lettuce.battle_engine.schema.Turn turn = 3;
+}
+
+

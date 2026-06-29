@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/special_condition_source.proto";
+
+message SpecialConditionApplyResultEntry {
+  SpecialConditionSource source = 1;
+  bool is_prevented = 2;
+  bool is_same_type_applied = 3;
+}
+
+

@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.protoc_plugin;
+
+import "lettuce/battle_engine/protoc_plugin/custom_option_boolean.proto";
+import "lettuce/battle_engine/protoc_plugin/custom_option_module_id.proto";
+import "lettuce/battle_engine/protoc_plugin/custom_option_template_id.proto";
+
+message TemplateDefaultBoolean {
+  CustomOptionModuleId module = 1;
+  CustomOptionTemplateId template = 2;
+  CustomOptionBoolean value = 3;
+}
+
+

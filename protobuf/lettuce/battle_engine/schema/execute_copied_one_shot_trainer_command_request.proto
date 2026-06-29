@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/card_id.proto";
+import "lettuce/battle_engine/schema/logic_specifier.proto";
+import "lettuce/battle_engine/schema/player_id.proto";
+
+message ExecuteCopiedOneShotTrainerCommandRequest {
+  PlayerId player_id = 1;
+  LogicSpecifier logic_specifier = 2;
+  CardId copied_card_id = 3;
+}
+
+

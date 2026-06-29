@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+message ExecuteAttackPreExecutionStepCommandResponse {
+  int32 pokemon_attack_used_count = 1;
+}
+
+

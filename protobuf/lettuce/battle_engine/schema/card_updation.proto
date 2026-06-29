@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/card_id_updation.proto";
+import "lettuce/battle_engine/schema/origin_card_updation.proto";
+import "lettuce/battle_engine/schema/player_id_updation.proto";
+
+message CardUpdation {
+  CardIdUpdation id = 1;
+  PlayerIdUpdation controller = 2;
+  OriginCardUpdation origin = 3;
+}
+
+

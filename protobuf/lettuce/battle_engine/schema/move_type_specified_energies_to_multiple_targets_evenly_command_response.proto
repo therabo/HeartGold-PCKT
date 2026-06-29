@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/energy_move.proto";
+
+message MoveTypeSpecifiedEnergiesToMultipleTargetsEvenlyCommandResponse {
+  bool is_source_insufficient = 1;
+  repeated EnergyMove energy_moves = 2;
+}
+
+

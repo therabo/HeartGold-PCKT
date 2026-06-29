@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/hidden_origin_player.proto";
+
+message HiddenMatch {
+  HiddenOriginPlayer player1 = 1;
+  HiddenOriginPlayer player2 = 2;
+}
+
+

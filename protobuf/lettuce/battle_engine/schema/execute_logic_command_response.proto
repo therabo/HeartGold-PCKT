@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/one_shot_effect_apply_specification_result.proto";
+
+message ExecuteLogicCommandResponse {
+  OneShotEffectApplySpecificationResult apply_result = 1;
+}
+
+

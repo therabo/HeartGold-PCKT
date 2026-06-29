@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/battle_object_id.proto";
+import "lettuce/battle_engine/schema/no_operation_notation.proto";
+import "lettuce/battle_engine/schema/no_operation_notation_parameter.proto";
+import "lettuce/battle_engine/schema/no_operation_type.proto";
+
+message AnnotatedNoOperationCommandRequest {
+  NoOperationNotation notation = 1;
+  NoOperationNotationParameter notation_parameter = 2;
+  NoOperationType notation_type = 3;
+  BattleObjectId target = 4;
+}
+
+

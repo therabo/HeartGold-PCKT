@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/expected_action.proto";
+import "lettuce/battle_engine/schema/logic_specifier.proto";
+import "lettuce/battle_engine/schema/player_id.proto";
+
+message SetExpectedActionsCommandRequest {
+  repeated ExpectedAction expected_actions = 1;
+  int32 action_requirement_id = 2;
+  LogicSpecifier cause_logic = 3;
+  PlayerId cause_player_id = 4;
+}
+
+

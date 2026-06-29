@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema.effect.impl;
+
+import "lettuce/battle_engine/schema/player_id_updation.proto";
+
+message ContinuousEffectOperation_PreventPlaySupportIfInActiveUpdation {
+  lettuce.battle_engine.schema.PlayerIdUpdation target = 1;
+}
+
+

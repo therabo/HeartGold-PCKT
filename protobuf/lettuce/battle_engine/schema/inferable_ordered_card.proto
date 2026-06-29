@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/inferable_card.proto";
+
+message InferableOrderedCard {
+  int32 order = 1;
+  InferableCard card = 2;
+}
+
+

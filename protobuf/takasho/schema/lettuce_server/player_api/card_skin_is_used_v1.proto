@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package takasho.schema.lettuce_server.player_api;
+
+import "takasho/schema/lettuce_server/resource/card_skin/card_skin.proto";
+
+message CardSkinIsUsedV1 {
+  message Types {
+    message Request {
+      repeated takasho.schema.lettuce_server.resource.card_skin.CardSkin card_skins = 1;
+    }
+    message Response {
+      bool is_used_from_album = 1;
+      bool is_used_from_mount = 2;
+      bool is_used_from_deck = 3;
+      bool has_public_collection = 4;
+    }
+  }
+}
+
+

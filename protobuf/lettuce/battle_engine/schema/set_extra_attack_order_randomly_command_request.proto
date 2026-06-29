@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/battle_object_id.proto";
+import "lettuce/battle_engine/schema/damage_amount.proto";
+import "lettuce/battle_engine/schema/extra_attack_order_option.proto";
+import "lettuce/battle_engine/schema/player_id.proto";
+
+message SetExtraAttackOrderRandomlyCommandRequest {
+  PlayerId controller = 1;
+  int32 count = 2;
+  DamageAmount damage = 3;
+  ExtraAttackOrderOption damage_calculation_option_for_active = 4;
+  ExtraAttackOrderOption damage_calculation_option_for_bench = 5;
+  repeated BattleObjectId excluded_pokemons = 6;
+}
+
+

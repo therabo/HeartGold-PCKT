@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+message PlayerFlagsUpdation {
+  optional int32 last_pokemon_knocked_out_by_attack_damage_turn = 1;
+}
+
+

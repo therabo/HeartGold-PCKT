@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/hidden_bench_pokemon_object_updation.proto";
+import "lettuce/battle_engine/schema/hidden_face_down_card_updation.proto";
+import "lettuce/battle_engine/schema/player_id_updation.proto";
+
+message HiddenBenchFieldUpdation {
+  PlayerIdUpdation owner = 1;
+  HiddenBenchPokemonObjectUpdation bench_pokemon = 2;
+  HiddenFaceDownCardUpdation face_down_card = 3;
+}
+
+

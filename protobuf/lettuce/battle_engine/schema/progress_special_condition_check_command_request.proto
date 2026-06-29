@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/player_id.proto";
+import "lettuce/battle_engine/schema/special_condition_check_progress.proto";
+
+message ProgressSpecialConditionCheckCommandRequest {
+  PlayerId check_player = 1;
+  SpecialConditionCheckProgress check_progress = 2;
+}
+
+

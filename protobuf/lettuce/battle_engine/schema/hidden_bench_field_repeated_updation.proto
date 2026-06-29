@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/hidden_bench_field.proto";
+import "lettuce/battle_engine/schema/hidden_bench_field_updation.proto";
+
+message HiddenBenchFieldRepeatedUpdation {
+  int32 index = 1;
+  oneof operation {
+    HiddenBenchField add = 2;
+    HiddenBenchFieldUpdation updation = 3;
+    bool removed = 4;
+  }
+}
+
+

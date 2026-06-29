@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema.effect.impl;
+
+import "lettuce/battle_engine/schema/battle_object_id_updation.proto";
+
+message ContinuousEffectOperation_ReduceDamageIfCoinHeadUpdation {
+  lettuce.battle_engine.schema.BattleObjectIdUpdation target = 1;
+  optional int32 applied_turn = 2;
+  optional bool is_flip_coin_resolved = 3;
+  optional int32 reduce_damage = 4;
+  optional bool is_flip_coin_result_head = 5;
+}
+
+

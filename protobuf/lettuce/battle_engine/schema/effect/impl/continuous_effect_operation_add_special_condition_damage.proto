@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema.effect.impl;
+
+import "lettuce/battle_engine/schema/damage_amount.proto";
+import "lettuce/battle_engine/schema/player_id.proto";
+import "lettuce/battle_engine/schema/special_condition_type.proto";
+
+message ContinuousEffectOperation_AddSpecialConditionDamage {
+  lettuce.battle_engine.schema.DamageAmount add_amount = 1;
+  lettuce.battle_engine.schema.PlayerId target = 2;
+  lettuce.battle_engine.schema.SpecialConditionType type = 3;
+}
+
+

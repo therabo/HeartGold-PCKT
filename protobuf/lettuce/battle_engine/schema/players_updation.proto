@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/player_updation.proto";
+
+message PlayersUpdation {
+  PlayerUpdation player1 = 1;
+  PlayerUpdation player2 = 2;
+}
+
+

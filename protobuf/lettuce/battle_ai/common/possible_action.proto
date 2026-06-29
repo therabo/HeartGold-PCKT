@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package lettuce.battle_ai.common;
+
+import "lettuce/battle_engine/schema/action.proto";
+
+message PossibleAction {
+  repeated lettuce.battle_engine.schema.Action player1 = 1;
+  repeated lettuce.battle_engine.schema.Action player2 = 2;
+}
+
+

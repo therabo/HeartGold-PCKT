@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.protoc_plugin;
+
+import "lettuce/battle_engine/protoc_plugin/custom_option_boolean.proto";
+import "lettuce/battle_engine/protoc_plugin/custom_option_scope_type.proto";
+
+message HiddenOptions {
+  CustomOptionScopeType scope = 11;
+  string hidden_name = 12;
+  CustomOptionBoolean autogen_converter = 13;
+}
+
+

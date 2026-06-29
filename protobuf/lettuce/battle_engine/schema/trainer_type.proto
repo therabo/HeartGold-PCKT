@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+enum TrainerType {
+  TRAINER_TYPE_UNSPECIFIED = 0;
+  TRAINER_TYPE_SUPPORT = 1;
+  TRAINER_TYPE_ITEM = 2;
+  TRAINER_TYPE_POKEMON_TOOL = 3;
+}
+

@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/card_id.proto";
+import "lettuce/battle_engine/schema/draw_card_result_type.proto";
+
+message HiddenDrawCardFromLibrariesCommandResponse {
+  repeated CardId self_card_ids = 1;
+  DrawCardResultType self_result_type = 2;
+  int32 opponent_count = 3;
+  DrawCardResultType opponent_result_type = 4;
+}
+
+

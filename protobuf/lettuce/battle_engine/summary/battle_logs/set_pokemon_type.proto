@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.summary.battle_logs;
+
+enum SetPokemonType {
+  SET_POKEMON_TYPE_UNSPECIFIED = 0;
+  SET_POKEMON_TYPE_SWAP = 1;
+  SET_POKEMON_TYPE_PLAY = 2;
+}
+

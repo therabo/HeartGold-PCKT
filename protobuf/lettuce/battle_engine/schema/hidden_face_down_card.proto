@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/card.proto";
+
+message HiddenFaceDownCard {
+  bool has_public = 1;
+  Card public = 2;
+  bool has_face_down_card = 3;
+}
+
+

@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/hidden_action_requirement.proto";
+import "lettuce/battle_engine/schema/phase.proto";
+import "lettuce/battle_engine/schema/player_id.proto";
+import "lettuce/battle_engine/schema/pokemon_attack_used_on_previous_turn.proto";
+import "lettuce/battle_engine/schema/procedure.proto";
+import "lettuce/battle_engine/schema/turn_flags.proto";
+
+message HiddenTurn {
+  int32 number = 1;
+  Phase phase = 2;
+  TurnFlags flags = 3;
+  PlayerId turn_player_id = 4;
+  HiddenActionRequirement action_requirement = 5;
+  Procedure procedure = 6;
+  PlayerId prev_turn_player = 7;
+  repeated PokemonAttackUsedOnPreviousTurn pokemon_attack_used_on_previous_turn = 8;
+}
+
+

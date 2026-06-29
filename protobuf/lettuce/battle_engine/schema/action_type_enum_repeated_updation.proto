@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/action_type.proto";
+import "lettuce/battle_engine/schema/action_type_enum_updation.proto";
+
+message ActionTypeEnumRepeatedUpdation {
+  int32 index = 1;
+  oneof operation {
+    ActionType add = 2;
+    ActionTypeEnumUpdation updation = 3;
+    bool removed = 4;
+  }
+}
+
+

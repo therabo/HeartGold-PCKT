@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema.effect.impl;
+
+import "lettuce/battle_engine/schema/player_id.proto";
+
+message ContinuousEffectOperation_PreventEvolveActivePokemonFromHand {
+  lettuce.battle_engine.schema.PlayerId target = 1;
+}
+
+

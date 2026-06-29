@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/card.proto";
+import "lettuce/battle_engine/schema/card_id.proto";
+
+message ReturnPokemonToHandCommandResponse {
+  CardId discarded_tool_card = 1;
+  repeated Card cards = 2;
+  bool is_prevented = 3;
+}
+
+

@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+message HiddenRevealAllFilteredLibraryCardCommandResponse {
+  int32 count = 1;
+  bool is_shuffled = 2;
+}
+
+

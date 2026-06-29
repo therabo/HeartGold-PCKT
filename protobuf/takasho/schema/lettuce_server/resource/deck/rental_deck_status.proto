@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package takasho.schema.lettuce_server.resource.deck;
+
+message RentalDeckStatus {
+  string rental_deck_id = 1;
+  fixed64 used_count = 2;
+}
+
+

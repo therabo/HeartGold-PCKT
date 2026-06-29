@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema.logic;
+
+import "lettuce/battle_engine/schema/card_id_updation.proto";
+import "lettuce/battle_engine/schema/continuous_effect_instance_id_updation.proto";
+import "lettuce/battle_engine/schema/damage_amount_updation.proto";
+import "lettuce/battle_engine/schema/effect_damage_result_repeated_updation.proto";
+import "lettuce/battle_engine/schema/player_id_updation.proto";
+
+message ResolvingLogicEffectDamageInfoUpdation {
+  optional bool has_resolving = 1;
+  lettuce.battle_engine.schema.PlayerIdUpdation applier = 2;
+  lettuce.battle_engine.schema.CardIdUpdation applier_card = 3;
+  lettuce.battle_engine.schema.DamageAmountUpdation damage_amount = 4;
+  lettuce.battle_engine.schema.ContinuousEffectInstanceIdUpdation effect_instance_id = 5;
+  repeated lettuce.battle_engine.schema.EffectDamageResultRepeatedUpdation damage_results = 6;
+}
+
+

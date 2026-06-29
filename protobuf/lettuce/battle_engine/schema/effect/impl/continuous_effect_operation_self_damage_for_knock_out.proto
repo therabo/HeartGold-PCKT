@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema.effect.impl;
+
+import "lettuce/battle_engine/schema/battle_object_id.proto";
+import "lettuce/battle_engine/schema/damage_amount.proto";
+import "lettuce/battle_engine/schema/pokemon_attack_id.proto";
+
+message ContinuousEffectOperation_SelfDamageForKnockOut {
+  lettuce.battle_engine.schema.DamageAmount damage = 1;
+  int32 applied_turn = 2;
+  lettuce.battle_engine.schema.BattleObjectId target = 3;
+  lettuce.battle_engine.schema.BattleObjectId knocked_out_check_pokemon = 4;
+  lettuce.battle_engine.schema.PokemonAttackId knocked_out_check_attack_id = 5;
+}
+
+

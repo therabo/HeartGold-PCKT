@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema.logic.impl;
+
+enum LogicState_FlipCoin_Step {
+  LOGIC_STATE_FLIP_COIN_STEP_UNSPECIFIED = 0;
+  LOGIC_STATE_FLIP_COIN_STEP_ON_FLIP = 1;
+  LOGIC_STATE_FLIP_COIN_STEP_ON_FLIP_AFTER = 2;
+  LOGIC_STATE_FLIP_COIN_STEP_ON_FINISH = 3;
+}
+

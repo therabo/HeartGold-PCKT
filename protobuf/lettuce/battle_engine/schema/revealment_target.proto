@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+enum RevealmentTarget {
+  REVEALMENT_TARGET_UNSPECIFIED = 0;
+  REVEALMENT_TARGET_SELF = 1;
+  REVEALMENT_TARGET_OPPONENT = 2;
+  REVEALMENT_TARGET_BOTH = 3;
+}
+

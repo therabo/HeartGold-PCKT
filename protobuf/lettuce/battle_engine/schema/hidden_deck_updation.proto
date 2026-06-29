@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/deck_updation.proto";
+import "lettuce/battle_engine/schema/private_deck_updation.proto";
+
+message HiddenDeckUpdation {
+  optional bool has_public = 1;
+  DeckUpdation public = 2;
+  PrivateDeckUpdation private_deck = 3;
+}
+
+

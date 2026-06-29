@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/energy_type.proto";
+
+message ChangeInactiveEnergyInEnergyZoneRandomlyCommandResponse {
+  EnergyType before_energy_type = 1;
+  EnergyType after_energy_type = 2;
+}
+
+

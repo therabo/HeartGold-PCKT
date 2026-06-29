@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/card.proto";
+import "lettuce/battle_engine/schema/card_id.proto";
+
+message ExchangeHandCardForLibraryPokemonCommandResponse {
+  repeated CardId hand_card_ids = 1;
+  repeated Card library_cards = 2;
+  repeated CardId refund_hand_card_ids = 3;
+  bool is_shuffled_after_card_to_library = 4;
+  bool is_shuffled_at_last = 5;
+}
+
+

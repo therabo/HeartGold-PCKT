@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.summary.battle_logs;
+
+import "lettuce/battle_engine/schema/energy_set.proto";
+import "lettuce/battle_engine/schema/origin_card.proto";
+
+message MoveEnergyLog {
+  lettuce.battle_engine.schema.OriginCard from = 1;
+  lettuce.battle_engine.schema.OriginCard to = 2;
+  lettuce.battle_engine.schema.EnergySet energies = 3;
+}
+
+

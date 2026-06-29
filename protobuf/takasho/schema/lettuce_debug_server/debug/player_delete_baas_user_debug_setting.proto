@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package takasho.schema.lettuce_debug_server.debug;
+
+message PlayerDeleteBaasUserDebugSetting {
+  message Types {
+    message Request {
+    }
+    message Response {
+    }
+  }
+}
+
+

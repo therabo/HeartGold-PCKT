@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+message UInt64ValueRepeatedUpdation {
+  int32 index = 1;
+  oneof operation {
+    fixed64 add = 2;
+    fixed64 updation = 3;
+    bool removed = 4;
+  }
+}
+
+

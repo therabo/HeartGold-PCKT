@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema.logic.local.triggered;
+
+import "lettuce/battle_engine/schema/battle_object_id_updation.proto";
+
+message PokemonPlayedToBenchTriggerUpdation {
+  lettuce.battle_engine.schema.BattleObjectIdUpdation pokemon = 1;
+  optional bool is_from_hand = 2;
+}
+
+

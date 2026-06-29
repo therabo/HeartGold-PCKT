@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.summary.battle_logs;
+
+import "lettuce/battle_engine/schema/card.proto";
+
+message ApplyDamageLog {
+  lettuce.battle_engine.schema.Card card = 1;
+  int32 applied_damage = 2;
+  int32 total_damage = 3;
+  int32 max_hp = 4;
+  bool is_weakness = 5;
+  int32 total_applied_damage_to_opponent_at_once = 6;
+  bool is_attack_damage = 7;
+  lettuce.battle_engine.schema.Card applier_card = 8;
+  bool is_resisted = 9;
+}
+
+

@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/origin_card.proto";
+import "lettuce/battle_engine/schema/origin_card_updation.proto";
+
+message OriginCardRepeatedUpdation {
+  int32 index = 1;
+  oneof operation {
+    OriginCard add = 2;
+    OriginCardUpdation updation = 3;
+    bool removed = 4;
+  }
+}
+
+

@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema.effect.impl;
+
+import "lettuce/battle_engine/schema/battle_object_id.proto";
+import "lettuce/battle_engine/schema/card_name.proto";
+import "lettuce/battle_engine/schema/damage_amount.proto";
+
+message ContinuousEffectOperation_AddAttackDamageToThisPokemonIfSpecifyingNamesExists {
+  lettuce.battle_engine.schema.BattleObjectId target = 1;
+  lettuce.battle_engine.schema.DamageAmount add_amount = 2;
+  repeated lettuce.battle_engine.schema.CardName names = 3;
+}
+
+

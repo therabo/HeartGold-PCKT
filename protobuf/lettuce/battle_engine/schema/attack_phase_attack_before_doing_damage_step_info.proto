@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+message AttackPhaseAttackBeforeDoingDamageStepInfo {
+  bool is_effect_applied_except_child_effect_copying = 1;
+}
+
+

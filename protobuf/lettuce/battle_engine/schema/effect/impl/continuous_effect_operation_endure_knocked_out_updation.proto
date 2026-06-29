@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema.effect.impl;
+
+import "lettuce/battle_engine/schema/battle_object_id_updation.proto";
+
+message ContinuousEffectOperation_EndureKnockedOutUpdation {
+  lettuce.battle_engine.schema.BattleObjectIdUpdation target = 1;
+  optional bool is_flip_coin_resolved = 2;
+  optional int32 after_hp = 3;
+}
+
+

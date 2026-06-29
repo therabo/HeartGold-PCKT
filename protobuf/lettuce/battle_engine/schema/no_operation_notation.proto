@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+enum NoOperationNotation {
+  NO_OPERATION_NOTATION_UNDEFINED = 0;
+  NO_OPERATION_NOTATION_DISPLAY_TOAST_TEXT1 = 1;
+}
+

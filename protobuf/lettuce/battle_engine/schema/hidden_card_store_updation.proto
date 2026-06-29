@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/card_repeated_updation.proto";
+
+message HiddenCardStoreUpdation {
+  repeated CardRepeatedUpdation additional_public_cards = 1;
+}
+
+

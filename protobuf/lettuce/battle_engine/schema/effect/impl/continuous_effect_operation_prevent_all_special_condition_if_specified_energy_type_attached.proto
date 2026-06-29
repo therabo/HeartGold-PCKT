@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema.effect.impl;
+
+import "lettuce/battle_engine/schema/energy_type.proto";
+import "lettuce/battle_engine/schema/player_id.proto";
+
+message ContinuousEffectOperation_PreventAllSpecialConditionIfSpecifiedEnergyTypeAttached {
+  lettuce.battle_engine.schema.PlayerId target = 1;
+  lettuce.battle_engine.schema.EnergyType energy_type = 2;
+}
+
+

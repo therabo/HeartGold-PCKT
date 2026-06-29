@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema.logic.impl;
+
+import "lettuce/battle_engine/schema/logic/impl/logic_state_flip_coin_step.proto";
+
+message LogicState_FlipCoin_StepEnumUpdation {
+  LogicState_FlipCoin_Step value = 1;
+}
+
+

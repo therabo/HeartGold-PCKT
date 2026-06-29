@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/attack_failed_reason.proto";
+
+message SetAttackFailedCommandRequest {
+  AttackFailedReason reason = 1;
+}
+
+

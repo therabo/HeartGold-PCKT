@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.summary.battle_logs;
+
+import "lettuce/battle_engine/schema/player_id.proto";
+import "lettuce/battle_engine/schema/prize_amount.proto";
+
+message GameCompletedLog {
+  int32 turn_number = 1;
+  lettuce.battle_engine.schema.PlayerId winner_player = 2;
+  lettuce.battle_engine.schema.PrizeAmount player1_prize = 3;
+  lettuce.battle_engine.schema.PrizeAmount player2_prize = 4;
+}
+
+

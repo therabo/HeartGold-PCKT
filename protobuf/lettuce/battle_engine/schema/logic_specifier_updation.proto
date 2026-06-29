@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/battle_object_id_updation.proto";
+import "lettuce/battle_engine/schema/card_id_updation.proto";
+import "lettuce/battle_engine/schema/continuous_effect_instance_id_updation.proto";
+import "lettuce/battle_engine/schema/logic_type_enum_updation.proto";
+import "lettuce/battle_engine/schema/master_card_id_updation.proto";
+import "lettuce/battle_engine/schema/master_trainer_id_updation.proto";
+import "lettuce/battle_engine/schema/pokemon_ability_id_updation.proto";
+import "lettuce/battle_engine/schema/pokemon_attack_id_updation.proto";
+
+message LogicSpecifierUpdation {
+  BattleObjectIdUpdation battle_object_id = 1;
+  CardIdUpdation card_id = 2;
+  LogicTypeEnumUpdation logic_type = 3;
+  PokemonAttackIdUpdation attack_id = 4;
+  PokemonAbilityIdUpdation ability_id = 5;
+  PokemonAttackIdUpdation parent_attack_id = 6;
+  ContinuousEffectInstanceIdUpdation continuous_effect_instance_id = 7;
+  MasterTrainerIdUpdation trainer_id = 8;
+  MasterCardIdUpdation owner_card_id = 9;
+}
+
+

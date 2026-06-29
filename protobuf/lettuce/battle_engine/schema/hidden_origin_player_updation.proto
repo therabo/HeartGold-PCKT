@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/hidden_deck_updation.proto";
+import "lettuce/battle_engine/schema/player_id_updation.proto";
+
+message HiddenOriginPlayerUpdation {
+  PlayerIdUpdation battle_player_id = 1;
+  HiddenDeckUpdation deck = 3;
+  string app_player_id = 4;
+}
+
+

@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package lettuce.battle_ai.ml;
+
+message GlobalFeature {
+  repeated int32 selected_actions = 1;
+  repeated int32 selected_cards = 2;
+  repeated int32 selected_attacks = 3;
+  repeated int32 used_retreat = 4;
+  repeated int32 used_support = 5;
+  repeated int32 is_action_type_selection_phase = 6;
+  repeated int32 retreat_cost_reduced = 7;
+  repeated int32 turn = 101;
+  repeated int32 action_required_count_in_this_turn = 102;
+}
+
+

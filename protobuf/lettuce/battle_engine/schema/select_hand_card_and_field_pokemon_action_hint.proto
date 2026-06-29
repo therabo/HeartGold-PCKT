@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/select_hand_card_and_field_pokemon_candidate.proto";
+
+message SelectHandCardAndFieldPokemonActionHint {
+  repeated SelectHandCardAndFieldPokemonCandidate candidates = 1;
+}
+
+

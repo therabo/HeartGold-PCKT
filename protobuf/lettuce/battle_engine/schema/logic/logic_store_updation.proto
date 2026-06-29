@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema.logic;
+
+import "lettuce/battle_engine/schema/logic/logic_state_repeated_updation.proto";
+import "lettuce/battle_engine/schema/logic/resolving_logic_effect_damage_info_updation.proto";
+import "lettuce/battle_engine/schema/logic/triggered_logic_info_repeated_updation.proto";
+
+message LogicStoreUpdation {
+  repeated LogicStateRepeatedUpdation resolving_states = 1;
+  repeated LogicStateRepeatedUpdation attack_states = 2;
+  repeated LogicStateRepeatedUpdation game_states = 3;
+  repeated TriggeredLogicInfoRepeatedUpdation resolving_triggered_logics = 4;
+  repeated TriggeredLogicInfoRepeatedUpdation triggered_logics = 5;
+  ResolvingLogicEffectDamageInfoUpdation resolving_logic_effect_damage_info = 6;
+}
+
+

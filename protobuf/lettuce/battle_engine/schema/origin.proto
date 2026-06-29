@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/match.proto";
+import "lettuce/battle_engine/schema/random_specification.proto";
+import "lettuce/battle_engine/schema/regulation.proto";
+
+message Origin {
+  Match match = 1;
+  Regulation regulation = 2;
+  RandomSpecification random = 3;
+}
+
+

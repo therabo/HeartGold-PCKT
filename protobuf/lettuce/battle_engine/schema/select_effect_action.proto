@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+message SelectEffectAction {
+  int32 selected_effect_index = 1;
+}
+
+

@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/action_specification_result_reason.proto";
+import "lettuce/battle_engine/schema/action_specification_result_reason_parameter.proto";
+import "lettuce/battle_engine/schema/one_shot_effect_apply_specification_result.proto";
+import "lettuce/battle_engine/schema/origin_card.proto";
+
+message ExecuteCopiedOneShotTrainerCommandResponse {
+  bool can_play = 1;
+  ActionSpecificationResultReason cannot_play_reason = 2;
+  repeated ActionSpecificationResultReasonParameter cannot_play_reason_parameters = 3;
+  OneShotEffectApplySpecificationResult apply_result = 4;
+  OriginCard copied_card = 5;
+}
+
+

@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package takasho.schema.lettuce_server.resource.item_acquisition;
+
+import "takasho/schema/lettuce_server/resource/card/card_instance.proto";
+
+message AcquiredItemStats {
+  fixed64 dropped_bright_sand_amount = 1;
+  repeated takasho.schema.lettuce_server.resource.card.CardInstance first_acquired_cards_in_expansions = 2;
+}
+
+

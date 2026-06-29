@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/special_condition_check_progress.proto";
+
+message SpecialConditionCheckProgressEnumUpdation {
+  SpecialConditionCheckProgress value = 1;
+}
+
+

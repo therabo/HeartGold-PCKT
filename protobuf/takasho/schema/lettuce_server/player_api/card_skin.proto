@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package takasho.schema.lettuce_server.player_api;
+
+import "takasho/schema/lettuce_server/player_api/card_skin_exchange_v1.proto";
+import "takasho/schema/lettuce_server/player_api/card_skin_exchanged_catalog_list_v1.proto";
+import "takasho/schema/lettuce_server/player_api/card_skin_get_card_exchange_route_v1.proto";
+import "takasho/schema/lettuce_server/player_api/card_skin_get_exchanged_catalogs_v1.proto";
+import "takasho/schema/lettuce_server/player_api/card_skin_is_used_v1.proto";
+import "takasho/schema/lettuce_server/player_api/card_skin_list_v1.proto";
+
+service CardSkin {
+  rpc ListV1 (CardSkinListV1.Types.Request) returns (CardSkinListV1.Types.Response);
+  rpc ExchangeV1 (CardSkinExchangeV1.Types.Request) returns (CardSkinExchangeV1.Types.Response);
+  rpc GetExchangedCatalogsV1 (CardSkinGetExchangedCatalogsV1.Types.Request) returns (CardSkinGetExchangedCatalogsV1.Types.Response);
+  rpc GetCardExchangeRouteV1 (CardSkinGetCardExchangeRouteV1.Types.Request) returns (CardSkinGetCardExchangeRouteV1.Types.Response);
+  rpc ExchangedCatalogListV1 (CardSkinExchangedCatalogListV1.Types.Request) returns (CardSkinExchangedCatalogListV1.Types.Response);
+  rpc IsUsedV1 (CardSkinIsUsedV1.Types.Request) returns (CardSkinIsUsedV1.Types.Response);
+}
+

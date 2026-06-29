@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/knocked_out_pokemon.proto";
+
+message ExecuteWinnerCheckProcedureCommandResponse {
+  repeated KnockedOutPokemon player1_knocked_out_pokemon = 1;
+  repeated KnockedOutPokemon player2_knocked_out_pokemon = 2;
+  bool is_failed_return_pokemon_card_to_hand = 3;
+}
+
+

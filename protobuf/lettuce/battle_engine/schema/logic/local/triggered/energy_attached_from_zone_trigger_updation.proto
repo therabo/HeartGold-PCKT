@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema.logic.local.triggered;
+
+import "lettuce/battle_engine/schema/battle_object_id_updation.proto";
+import "lettuce/battle_engine/schema/energy_type_enum_updation.proto";
+
+message EnergyAttachedFromZoneTriggerUpdation {
+  lettuce.battle_engine.schema.EnergyTypeEnumUpdation energy = 1;
+  lettuce.battle_engine.schema.BattleObjectIdUpdation target = 2;
+}
+
+

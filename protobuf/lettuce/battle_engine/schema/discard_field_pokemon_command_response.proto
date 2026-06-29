@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/card_id.proto";
+
+message DiscardFieldPokemonCommandResponse {
+  repeated CardId cards = 1;
+  int32 discarded_pokemon_num = 2;
+}
+
+

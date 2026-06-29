@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+enum ProcedureState {
+  PROCEDURE_STATE_UNSPECIFIED = 0;
+  PROCEDURE_STATE_WILL_EXECUTE = 1;
+  PROCEDURE_STATE_EXECUTING = 2;
+  PROCEDURE_STATE_DID_EXECUTE = 3;
+}
+

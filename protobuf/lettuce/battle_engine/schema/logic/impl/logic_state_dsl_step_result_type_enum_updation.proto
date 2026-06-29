@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema.logic.impl;
+
+import "lettuce/battle_engine/schema/logic/impl/logic_state_dsl_step_result_type.proto";
+
+message LogicState_DslStepResult_TypeEnumUpdation {
+  LogicState_DslStepResult_Type value = 1;
+}
+
+

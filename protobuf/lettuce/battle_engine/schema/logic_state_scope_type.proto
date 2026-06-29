@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+enum LogicStateScopeType {
+  LOGIC_STATE_SCOPE_TYPE_UNSPECIFIED = 0;
+  LOGIC_STATE_SCOPE_TYPE_RESOLVING = 1;
+  LOGIC_STATE_SCOPE_TYPE_GAME = 2;
+  LOGIC_STATE_SCOPE_TYPE_ATTACK = 3;
+}
+

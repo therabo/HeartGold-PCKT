@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema.logic.impl;
+
+message LogicState_ActivatedUpdation {
+  optional bool has_activated = 1;
+  optional int32 activated_turn_number = 2;
+}
+
+

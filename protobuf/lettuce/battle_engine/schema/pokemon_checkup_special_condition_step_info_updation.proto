@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/player_id_updation.proto";
+import "lettuce/battle_engine/schema/special_condition_check_progress_enum_updation.proto";
+import "lettuce/battle_engine/schema/special_condition_check_progress_state_enum_updation.proto";
+
+message PokemonCheckupSpecialConditionStepInfoUpdation {
+  PlayerIdUpdation check_player = 1;
+  SpecialConditionCheckProgressEnumUpdation check_progress = 2;
+  SpecialConditionCheckProgressStateEnumUpdation check_progress_state = 3;
+}
+
+

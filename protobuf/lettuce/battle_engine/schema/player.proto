@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/discard_pile.proto";
+import "lettuce/battle_engine/schema/energy_zone.proto";
+import "lettuce/battle_engine/schema/hand.proto";
+import "lettuce/battle_engine/schema/hand_revealment.proto";
+import "lettuce/battle_engine/schema/inferable_hidden_cards.proto";
+import "lettuce/battle_engine/schema/library.proto";
+import "lettuce/battle_engine/schema/library_revealment.proto";
+import "lettuce/battle_engine/schema/player_flags.proto";
+import "lettuce/battle_engine/schema/player_id.proto";
+import "lettuce/battle_engine/schema/prize_amount.proto";
+
+message Player {
+  PlayerId id = 1;
+  Hand hand = 2;
+  Library library = 3;
+  DiscardPile discard_pile = 4;
+  EnergyZone energy_zone = 5;
+  PrizeAmount prize = 6;
+  LibraryRevealment library_revealment = 7;
+  HandRevealment hand_revealment = 8;
+  PlayerFlags flags = 9;
+  InferableHiddenCards inferable_nondeterministic_cards = 10;
+}
+
+

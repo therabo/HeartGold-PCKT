@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/action.proto";
+import "lettuce/battle_engine/schema/game.proto";
+
+message GameRecord {
+  Game game = 1;
+  repeated Action actions = 2;
+}
+
+

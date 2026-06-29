@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.summary.battle_logs;
+
+import "lettuce/battle_engine/schema/origin_card.proto";
+import "lettuce/battle_engine/schema/special_condition_type.proto";
+
+message ApplySpecialConditionLog {
+  lettuce.battle_engine.schema.OriginCard card = 1;
+  lettuce.battle_engine.schema.SpecialConditionType special_condition = 2;
+  bool is_same_type_applied = 3;
+}
+
+

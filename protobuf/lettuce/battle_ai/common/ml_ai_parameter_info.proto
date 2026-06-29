@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package lettuce.battle_ai.common;
+
+message MlAiParameterInfo {
+  double temperature = 1;
+  double probability_threshold = 2;
+  int32 top_k = 3;
+  double top_p = 4;
+  double best_action_probability_coefficient = 5;
+}
+
+

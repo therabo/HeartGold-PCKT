@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/meta_updation.proto";
+import "lettuce/battle_engine/schema/origin_updation.proto";
+import "lettuce/battle_engine/schema/store_updation.proto";
+
+message GameUpdation {
+  OriginUpdation origin = 1;
+  StoreUpdation store = 2;
+  MetaUpdation meta = 3;
+}
+
+

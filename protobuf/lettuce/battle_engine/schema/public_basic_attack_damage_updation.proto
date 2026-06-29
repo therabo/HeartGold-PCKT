@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/damage_amount_updation.proto";
+
+message PublicBasicAttackDamageUpdation {
+  optional bool has_damage = 1;
+  DamageAmountUpdation amount = 2;
+}
+
+

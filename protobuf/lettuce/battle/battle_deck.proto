@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package lettuce.battle;
+
+import "lettuce/battle/battle_card.proto";
+import "lettuce/battle/battle_deck_energy_type.proto";
+
+message BattleDeck {
+  repeated BattleCard cards = 1;
+  repeated BattleDeckEnergyType energy_types = 2;
+  string play_mat_id = 3;
+  string deck_shield_id = 4;
+  string coin_skin_id = 5;
+}
+
+

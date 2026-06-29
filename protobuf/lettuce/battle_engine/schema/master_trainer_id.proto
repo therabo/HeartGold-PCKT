@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+message MasterTrainerId {
+  string value = 1;
+}
+
+

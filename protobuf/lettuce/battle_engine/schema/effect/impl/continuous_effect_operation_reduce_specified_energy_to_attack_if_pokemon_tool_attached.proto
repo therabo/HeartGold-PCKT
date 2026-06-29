@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema.effect.impl;
+
+import "lettuce/battle_engine/schema/battle_object_id.proto";
+import "lettuce/battle_engine/schema/energy_type.proto";
+
+message ContinuousEffectOperation_ReduceSpecifiedEnergyToAttackIfPokemonToolAttached {
+  lettuce.battle_engine.schema.BattleObjectId target = 1;
+  lettuce.battle_engine.schema.EnergyType energy_type = 2;
+  int32 reduce_amount = 3;
+}
+
+

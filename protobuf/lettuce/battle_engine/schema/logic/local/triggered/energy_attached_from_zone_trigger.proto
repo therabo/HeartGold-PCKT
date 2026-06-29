@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema.logic.local.triggered;
+
+import "lettuce/battle_engine/schema/battle_object_id.proto";
+import "lettuce/battle_engine/schema/energy_type.proto";
+
+message EnergyAttachedFromZoneTrigger {
+  lettuce.battle_engine.schema.EnergyType energy = 1;
+  lettuce.battle_engine.schema.BattleObjectId target = 2;
+}
+
+

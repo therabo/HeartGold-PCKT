@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema.logic.impl;
+
+import "lettuce/battle_engine/schema/logic/impl/logic_state_common_parameter.proto";
+
+message LogicState_Common {
+  repeated LogicState_CommonParameter values = 2;
+}
+
+

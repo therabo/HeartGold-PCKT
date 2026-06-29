@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/action_hint.proto";
+
+message NextActionInfo {
+  repeated ActionHint self_action_hints = 1;
+}
+
+

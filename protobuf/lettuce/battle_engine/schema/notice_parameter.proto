@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/battle_object_id.proto";
+import "lettuce/battle_engine/schema/card_name.proto";
+import "lettuce/battle_engine/schema/energy_type.proto";
+import "lettuce/battle_engine/schema/evolution_stage.proto";
+import "lettuce/battle_engine/schema/pokemon_ability_id.proto";
+import "lettuce/battle_engine/schema/pokemon_attack_id.proto";
+
+message NoticeParameter {
+  bool has_int_value = 1;
+  int32 int_value = 2;
+  EnergyType energy_type_value = 3;
+  CardName card_name_value = 4;
+  BattleObjectId object_id_value = 5;
+  PokemonAttackId attack_id_value = 6;
+  EvolutionStage evolution_stage_type_value = 7;
+  PokemonAbilityId ability_id_value = 8;
+  string string_value = 9;
+}
+
+

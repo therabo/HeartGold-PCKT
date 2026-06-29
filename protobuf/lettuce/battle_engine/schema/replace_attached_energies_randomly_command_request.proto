@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/battle_object_id.proto";
+import "lettuce/battle_engine/schema/logic_specifier.proto";
+
+message ReplaceAttachedEnergiesRandomlyCommandRequest {
+  BattleObjectId target = 1;
+  int32 count = 2;
+  LogicSpecifier applier_logic = 3;
+}
+
+

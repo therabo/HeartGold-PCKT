@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package takasho.schema.lettuce_server.player_api;
+
+import "takasho/schema/lettuce_server/resource/card/card_instance.proto";
+import "takasho/schema/lettuce_server/resource/card_exchange/card_exchange_catalog.proto";
+import "takasho/schema/lettuce_server/resource/item_acquisition/item_acquisition_result.proto";
+
+message CardSkinExchangeV1 {
+  message Types {
+    message Request {
+      string card_id = 1;
+      string catalog_id = 2;
+      fixed64 amount = 3;
+      repeated takasho.schema.lettuce_server.resource.card.CardInstance resource_cards = 4;
+    }
+    message Response {
+      repeated takasho.schema.lettuce_server.resource.card_exchange.CardExchangeCatalog exchanged_catalogs = 4;
+      takasho.schema.lettuce_server.resource.item_acquisition.ItemAcquisitionResult item_acquisition_result = 14;
+    }
+  }
+}
+
+

@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/effect_damage_result.proto";
+import "lettuce/battle_engine/schema/effect_damage_result_updation.proto";
+
+message EffectDamageResultRepeatedUpdation {
+  int32 index = 1;
+  oneof operation {
+    EffectDamageResult add = 2;
+    EffectDamageResultUpdation updation = 3;
+    bool removed = 4;
+  }
+}
+
+

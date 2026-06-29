@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema.effect.impl;
+
+import "lettuce/battle_engine/schema/energy_type_enum_updation.proto";
+import "lettuce/battle_engine/schema/player_id_updation.proto";
+import "lettuce/battle_engine/schema/pokemon_ability_id_updation.proto";
+
+message ContinuousEffectOperation_DoubleSpecifiedEnergyUpdation {
+  lettuce.battle_engine.schema.PlayerIdUpdation target_player = 1;
+  lettuce.battle_engine.schema.EnergyTypeEnumUpdation pokemon_type = 2;
+  lettuce.battle_engine.schema.EnergyTypeEnumUpdation double_energy = 3;
+  lettuce.battle_engine.schema.PokemonAbilityIdUpdation ability_id = 4;
+}
+
+

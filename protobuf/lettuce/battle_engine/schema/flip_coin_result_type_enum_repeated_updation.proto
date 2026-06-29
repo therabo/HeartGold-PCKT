@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/flip_coin_result_type.proto";
+import "lettuce/battle_engine/schema/flip_coin_result_type_enum_updation.proto";
+
+message FlipCoinResultTypeEnumRepeatedUpdation {
+  int32 index = 1;
+  oneof operation {
+    FlipCoinResultType add = 2;
+    FlipCoinResultTypeEnumUpdation updation = 3;
+    bool removed = 4;
+  }
+}
+
+

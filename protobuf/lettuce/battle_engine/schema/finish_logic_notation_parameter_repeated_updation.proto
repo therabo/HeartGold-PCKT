@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/finish_logic_notation_parameter.proto";
+import "lettuce/battle_engine/schema/finish_logic_notation_parameter_updation.proto";
+
+message FinishLogicNotationParameterRepeatedUpdation {
+  int32 index = 1;
+  oneof operation {
+    FinishLogicNotationParameter add = 2;
+    FinishLogicNotationParameterUpdation updation = 3;
+    bool removed = 4;
+  }
+}
+
+

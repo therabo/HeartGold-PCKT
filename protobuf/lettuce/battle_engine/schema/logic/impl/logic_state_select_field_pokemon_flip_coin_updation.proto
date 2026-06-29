@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema.logic.impl;
+
+import "lettuce/battle_engine/schema/battle_object_id_updation.proto";
+import "lettuce/battle_engine/schema/logic/impl/logic_state_select_field_pokemon_flip_coin_step_enum_updation.proto";
+
+message LogicState_SelectFieldPokemonFlipCoinUpdation {
+  LogicState_SelectFieldPokemonFlipCoin_StepEnumUpdation step = 1;
+  lettuce.battle_engine.schema.BattleObjectIdUpdation selected_pokemon = 2;
+  optional int32 head_count = 3;
+}
+
+

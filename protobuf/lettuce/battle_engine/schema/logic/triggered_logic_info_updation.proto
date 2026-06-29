@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema.logic;
+
+import "lettuce/battle_engine/schema/logic/local/triggered/trigger_info_updation.proto";
+import "lettuce/battle_engine/schema/logic_specifier_updation.proto";
+
+message TriggeredLogicInfoUpdation {
+  lettuce.battle_engine.schema.LogicSpecifierUpdation specifier = 1;
+  lettuce.battle_engine.schema.logic.local.triggered.TriggerInfoUpdation trigger_info = 2;
+}
+
+

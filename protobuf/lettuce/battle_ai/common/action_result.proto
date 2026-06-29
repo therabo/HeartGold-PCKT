@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package lettuce.battle_ai.common;
+
+import "lettuce/battle_ai/common/action_info.proto";
+import "lettuce/battle_ai/common/ml_ai_info.proto";
+import "lettuce/battle_ai/common/possible_action.proto";
+import "lettuce/battle_ai/common/possible_atomic_action.proto";
+import "lettuce/battle_ai/common/turn_atomic_action_info.proto";
+import "lettuce/battle_engine/schema/action.proto";
+import "lettuce/battle_engine/schema/player_id.proto";
+
+message ActionResult {
+  lettuce.battle_engine.schema.PlayerId winner = 1;
+  string winner_reason = 2;
+  bool done = 3;
+  PossibleAction possible_action = 4;
+  repeated PossibleAtomicAction possible_atomic_action = 5;
+  lettuce.battle_engine.schema.PlayerId current_player = 6;
+  lettuce.battle_engine.schema.Action previous_action = 7;
+  string action_reason = 8;
+  repeated ActionInfo action_history = 9;
+  repeated TurnAtomicActionInfo atomic_action_history = 10;
+  MlAiInfo ml_ai_info = 11;
+}
+
+

@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.protoc_plugin;
+
+import "lettuce/battle_engine/protoc_plugin/custom_option_boolean.proto";
+import "lettuce/battle_engine/protoc_plugin/custom_option_module_id.proto";
+import "lettuce/battle_engine/protoc_plugin/custom_option_template_id.proto";
+
+message ModuleInputOptions {
+  CustomOptionModuleId module = 1;
+  CustomOptionTemplateId template = 11;
+  string name = 21;
+  string base = 31;
+  CustomOptionBoolean cloneable = 41;
+  bool ignore = 51;
+}
+
+

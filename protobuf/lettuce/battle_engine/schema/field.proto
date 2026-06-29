@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/player_field.proto";
+
+message Field {
+  PlayerField player1_field = 1;
+  PlayerField player2_field = 2;
+}
+
+

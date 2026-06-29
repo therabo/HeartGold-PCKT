@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.protoc_plugin;
+
+import "lettuce/battle_engine/protoc_plugin/custom_option_boolean.proto";
+import "lettuce/battle_engine/protoc_plugin/custom_option_module_id.proto";
+
+message EnumOptions {
+  repeated CustomOptionModuleId module = 1;
+  CustomOptionBoolean with_updation = 2;
+}
+
+

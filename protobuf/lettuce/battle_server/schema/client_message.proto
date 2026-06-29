@@ -1,0 +1,59 @@
+syntax = "proto3";
+
+package lettuce.battle_server.schema;
+
+import "lettuce/battle_engine/schema/action.proto";
+import "lettuce/battle_engine/schema/origin_player.proto";
+import "lettuce/battle_engine/schema/regulation.proto";
+
+message ClientMessage {
+  message Types {
+    message Login {
+      message Types {
+        message Join {
+          string jwt = 1;
+        }
+        message DebugJoin {
+          string token = 1;
+          string battle_id = 2;
+          lettuce.battle_engine.schema.OriginPlayer origin_player = 3;
+          string opponent_app_player_id = 4;
+          string pvp_battle_rule_id = 5;
+          lettuce.battle_engine.schema.Regulation regulation = 6;
+          string jwt = 7;
+          bool use_full_game_data = 8;
+          fixed32 timer_participation_ms = 9;
+          fixed32 timer_ready_ms = 10;
+          fixed32 timer_battle_preparation_ms = 11;
+          fixed32 timer_total_battle_ms = 12;
+          fixed32 timer_turn_player_action_ms = 13;
+          fixed32 timer_non_turn_player_action_ms = 14;
+          fixed32 timer_action_buffer_ms = 15;
+          fixed32 timer_resume_ms = 16;
+        }
+        message Resume {
+          string token = 1;
+          fixed32 last_game_progress_id = 2;
+        }
+      }
+      oneof method {
+        ClientMessage.Types.Login.Types.Join join = 1;
+        ClientMessage.Types.Login.Types.DebugJoin debug_join = 2;
+        ClientMessage.Types.Login.Types.Resume resume = 3;
+      }
+    }
+    message Ready {
+    }
+    message DoAction {
+      repeated lettuce.battle_engine.schema.Action actions = 1;
+      int32 action_requirement_id = 2;
+    }
+  }
+  oneof data {
+    ClientMessage.Types.Login login = 1;
+    ClientMessage.Types.Ready ready = 2;
+    ClientMessage.Types.DoAction do_action = 3;
+  }
+}
+
+

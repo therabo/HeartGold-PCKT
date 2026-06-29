@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/pokemon_object_updation.proto";
+import "lettuce/battle_engine/schema/special_condition_repeated_updation.proto";
+
+message ActivePokemonObjectUpdation {
+  PokemonObjectUpdation pokemon = 1;
+  repeated SpecialConditionRepeatedUpdation special_conditions = 3;
+}
+
+

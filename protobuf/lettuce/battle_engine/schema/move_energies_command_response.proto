@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/energy_move.proto";
+
+message MoveEnergiesCommandResponse {
+  EnergyMove energy_move = 1;
+}
+
+

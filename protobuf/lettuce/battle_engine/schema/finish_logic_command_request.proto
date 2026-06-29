@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/finish_logic_notation.proto";
+import "lettuce/battle_engine/schema/logic_specifier.proto";
+
+message FinishLogicCommandRequest {
+  LogicSpecifier logic_specifier = 1;
+  FinishLogicNotation notation = 2;
+}
+
+

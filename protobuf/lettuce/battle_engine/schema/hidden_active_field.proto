@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/hidden_active_pokemon_object.proto";
+import "lettuce/battle_engine/schema/hidden_face_down_card.proto";
+import "lettuce/battle_engine/schema/player_id.proto";
+
+message HiddenActiveField {
+  PlayerId owner = 1;
+  HiddenActivePokemonObject active_pokemon = 2;
+  HiddenFaceDownCard face_down_card = 3;
+}
+
+

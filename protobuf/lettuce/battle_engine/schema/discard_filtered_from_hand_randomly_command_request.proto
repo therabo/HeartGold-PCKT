@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/card_filter_info.proto";
+import "lettuce/battle_engine/schema/player_id.proto";
+
+message DiscardFilteredFromHandRandomlyCommandRequest {
+  PlayerId player_id = 1;
+  int32 count = 2;
+  CardFilterInfo card_filter_info = 3;
+}
+
+

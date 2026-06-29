@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema.effect.impl;
+
+import "lettuce/battle_engine/schema/player_id.proto";
+
+message ContinuousEffectOperation_ReduceRetreatCostThisTurn {
+  lettuce.battle_engine.schema.PlayerId target = 1;
+  int32 reduce_cost = 2;
+  int32 applied_turn = 3;
+}
+
+

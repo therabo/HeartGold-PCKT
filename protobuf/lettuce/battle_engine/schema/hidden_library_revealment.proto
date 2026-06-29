@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/library_revealment.proto";
+
+message HiddenLibraryRevealment {
+  bool has_public = 1;
+  LibraryRevealment public = 2;
+  int32 count = 3;
+}
+
+

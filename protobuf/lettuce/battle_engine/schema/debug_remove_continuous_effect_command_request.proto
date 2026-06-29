@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/battle_object_id.proto";
+import "lettuce/battle_engine/schema/continuous_effect_instance_id.proto";
+import "lettuce/battle_engine/schema/player_id.proto";
+
+message DebugRemoveContinuousEffectCommandRequest {
+  PlayerId target_player = 1;
+  BattleObjectId target_pokemon = 2;
+  repeated ContinuousEffectInstanceId target_continuous_effect = 3;
+}
+
+

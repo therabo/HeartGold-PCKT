@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/card_name_repeated_updation.proto";
+
+message CardNamesUpdation {
+  repeated CardNameRepeatedUpdation names = 1;
+}
+
+

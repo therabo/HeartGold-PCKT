@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.summary.battle_logs;
+
+import "lettuce/battle_engine/schema/origin_card.proto";
+
+message EvolveLog {
+  lettuce.battle_engine.schema.OriginCard from = 1;
+  lettuce.battle_engine.schema.OriginCard to = 2;
+  bool is_active_pokemon = 3;
+}
+
+

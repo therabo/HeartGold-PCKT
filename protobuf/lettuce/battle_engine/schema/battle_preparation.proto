@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/battle_preparation_state.proto";
+import "lettuce/battle_engine/schema/player_id.proto";
+import "lettuce/battle_engine/schema/prepare_field_info.proto";
+
+message BattlePreparation {
+  BattlePreparationState state = 1;
+  PlayerId first_turn_player = 2;
+  PrepareFieldInfo prepare_field_info = 3;
+}
+
+

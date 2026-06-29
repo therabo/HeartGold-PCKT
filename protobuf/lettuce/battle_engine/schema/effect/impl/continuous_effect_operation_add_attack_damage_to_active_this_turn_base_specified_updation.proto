@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema.effect.impl;
+
+import "lettuce/battle_engine/schema/card_name_updation.proto";
+import "lettuce/battle_engine/schema/damage_amount_updation.proto";
+import "lettuce/battle_engine/schema/player_id_updation.proto";
+
+message ContinuousEffectOperation_AddAttackDamageToActiveThisTurnBaseSpecifiedUpdation {
+  lettuce.battle_engine.schema.DamageAmountUpdation add_amount = 1;
+  optional int32 applied_turn = 2;
+  lettuce.battle_engine.schema.PlayerIdUpdation target = 3;
+  lettuce.battle_engine.schema.CardNameUpdation base_name = 4;
+}
+
+

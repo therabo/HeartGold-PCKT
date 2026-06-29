@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/attack_failed_reason_enum_updation.proto";
+
+message AttackPhaseAttackJudgementStepInfoUpdation {
+  optional bool is_attack_failed = 1;
+  AttackFailedReasonEnumUpdation attack_failed_reason = 2;
+  optional bool is_misfire_copy_attack = 3;
+}
+
+

@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/origin_player.proto";
+
+message Match {
+  OriginPlayer player1 = 1;
+  OriginPlayer player2 = 2;
+}
+
+

@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package lettuce.battle_ai.ml;
+
+import "lettuce/battle_ai/ml/attack_feature.proto";
+import "lettuce/battle_ai/ml/card_feature.proto";
+import "lettuce/battle_ai/ml/global_feature.proto";
+import "lettuce/battle_ai/ml/player_feature.proto";
+
+message Feature {
+  CardFeature card_feature = 1;
+  PlayerFeature player_feature = 2;
+  AttackFeature attack_feature = 3;
+  GlobalFeature global_feature = 4;
+  repeated int32 deck_mask = 5;
+}
+
+

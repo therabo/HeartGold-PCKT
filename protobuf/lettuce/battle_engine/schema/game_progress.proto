@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/command_executed_result.proto";
+
+message GameProgress {
+  repeated CommandExecutedResult command_executed_results = 1;
+}
+
+

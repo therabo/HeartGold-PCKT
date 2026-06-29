@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/battle_object_store_updation.proto";
+import "lettuce/battle_engine/schema/battle_preparation_updation.proto";
+import "lettuce/battle_engine/schema/card_store_updation.proto";
+import "lettuce/battle_engine/schema/card_updation.proto";
+import "lettuce/battle_engine/schema/effect/continuous_effect_store_updation.proto";
+import "lettuce/battle_engine/schema/field_updation.proto";
+import "lettuce/battle_engine/schema/logic/logic_store_updation.proto";
+import "lettuce/battle_engine/schema/players_updation.proto";
+import "lettuce/battle_engine/schema/pokemon_attack_used_count_repeated_updation.proto";
+import "lettuce/battle_engine/schema/random_updation.proto";
+import "lettuce/battle_engine/schema/result_updation.proto";
+import "lettuce/battle_engine/schema/turn_updation.proto";
+
+message StoreUpdation {
+  TurnUpdation turn = 1;
+  PlayersUpdation players = 2;
+  FieldUpdation field = 3;
+  ResultUpdation result = 4;
+  lettuce.battle_engine.schema.logic.LogicStoreUpdation logic_store = 5;
+  RandomUpdation random = 6;
+  lettuce.battle_engine.schema.effect.ContinuousEffectStoreUpdation continuous_effect_store = 7;
+  CardUpdation activating_trainer = 8;
+  BattleObjectStoreUpdation battle_object_store = 9;
+  BattlePreparationUpdation battle_preparation = 10;
+  CardStoreUpdation card_store = 11;
+  repeated PokemonAttackUsedCountRepeatedUpdation pokemon_attack_used_counts = 12;
+}
+
+

@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/pokemon_attack_id.proto";
+
+message DetermineAttackAction {
+  PokemonAttackId attack_id = 1;
+}
+
+

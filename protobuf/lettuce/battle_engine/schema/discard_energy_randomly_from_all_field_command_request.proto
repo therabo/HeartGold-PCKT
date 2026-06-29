@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/logic_specifier.proto";
+
+message DiscardEnergyRandomlyFromAllFieldCommandRequest {
+  int32 count = 1;
+  LogicSpecifier applier_logic = 2;
+}
+
+

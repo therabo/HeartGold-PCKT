@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.protoc_plugin;
+
+message FieldOptions {
+  string hidden_name = 1;
+}
+
+

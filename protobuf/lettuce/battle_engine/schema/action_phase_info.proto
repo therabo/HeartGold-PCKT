@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/action_phase_determine_attack_info.proto";
+
+message ActionPhaseInfo {
+  ActionPhaseDetermineAttackInfo determine_attack_info = 1;
+  bool is_turn_end_reserved = 2;
+}
+
+

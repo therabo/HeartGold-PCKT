@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/bench_pokemon_object.proto";
+import "lettuce/battle_engine/schema/face_down_card.proto";
+import "lettuce/battle_engine/schema/player_id.proto";
+
+message BenchField {
+  PlayerId owner = 1;
+  BenchPokemonObject bench_pokemon = 2;
+  FaceDownCard face_down_card = 3;
+}
+
+

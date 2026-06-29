@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/phase_state.proto";
+
+message PhaseStateEnumUpdation {
+  PhaseState value = 1;
+}
+
+

@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/no_operation_type.proto";
+
+message NoOperationTypeEnumUpdation {
+  NoOperationType value = 1;
+}
+
+

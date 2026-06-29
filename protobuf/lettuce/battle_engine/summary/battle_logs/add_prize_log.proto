@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.summary.battle_logs;
+
+import "lettuce/battle_engine/schema/prize_amount.proto";
+
+message AddPrizeLog {
+  lettuce.battle_engine.schema.PrizeAmount prize = 1;
+  lettuce.battle_engine.schema.PrizeAmount total_prize = 2;
+}
+
+

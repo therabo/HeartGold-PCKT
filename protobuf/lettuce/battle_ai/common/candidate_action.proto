@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package lettuce.battle_ai.common;
+
+import "lettuce/battle_ai/common/candidate_atomic_actions.proto";
+
+message CandidateAction {
+  repeated CandidateAtomicActions actions = 1;
+}
+
+

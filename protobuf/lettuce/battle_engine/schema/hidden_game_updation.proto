@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/hidden_origin_updation.proto";
+import "lettuce/battle_engine/schema/hidden_store_updation.proto";
+import "lettuce/battle_engine/schema/meta_updation.proto";
+
+message HiddenGameUpdation {
+  HiddenOriginUpdation origin = 1;
+  HiddenStoreUpdation store = 2;
+  MetaUpdation meta = 3;
+}
+
+

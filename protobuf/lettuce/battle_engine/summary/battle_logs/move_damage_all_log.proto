@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.summary.battle_logs;
+
+import "lettuce/battle_engine/schema/card.proto";
+
+message MoveDamageAllLog {
+  lettuce.battle_engine.schema.Card from_card = 1;
+  lettuce.battle_engine.schema.Card to_card = 2;
+  int32 damage = 3;
+  int32 from_max_hp = 4;
+  int32 to_total_damage = 5;
+  int32 to_max_hp = 6;
+  int32 from_total_damage = 7;
+}
+
+

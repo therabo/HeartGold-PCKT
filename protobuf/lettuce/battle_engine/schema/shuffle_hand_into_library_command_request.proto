@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/player_id.proto";
+
+message ShuffleHandIntoLibraryCommandRequest {
+  PlayerId player_id = 1;
+  bool is_revealed_to_opponent = 2;
+}
+
+

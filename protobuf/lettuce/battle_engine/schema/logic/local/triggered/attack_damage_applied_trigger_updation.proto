@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema.logic.local.triggered;
+
+import "lettuce/battle_engine/schema/battle_object_id_updation.proto";
+import "lettuce/battle_engine/schema/card_id_updation.proto";
+
+message AttackDamageAppliedTriggerUpdation {
+  lettuce.battle_engine.schema.BattleObjectIdUpdation defender = 2;
+  lettuce.battle_engine.schema.CardIdUpdation attacker = 3;
+}
+
+

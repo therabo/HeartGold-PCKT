@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package lettuce.battle_ai.common;
+
+import "lettuce/battle_ai/common/possible_atomic_action.proto";
+
+message CandidateAtomicAction {
+  PossibleAtomicAction possible_atomic_action = 1;
+  float original_policy = 2;
+  float atomic_action_probability = 3;
+  float atomic_action_probability_without_parameter_adjustment = 4;
+  bool is_selected_atomic_action = 5;
+}
+
+

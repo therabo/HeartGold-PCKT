@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/energy_set.proto";
+
+message DiscardEnergyRandomlyCommandResponse {
+  EnergySet destroyed = 1;
+  bool is_prevented = 2;
+}
+
+

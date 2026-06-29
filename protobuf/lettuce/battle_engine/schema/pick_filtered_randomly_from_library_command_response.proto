@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/card_id.proto";
+import "lettuce/battle_engine/schema/draw_card_result_type.proto";
+
+message PickFilteredRandomlyFromLibraryCommandResponse {
+  repeated CardId card_ids = 1;
+  bool is_shuffled = 2;
+  DrawCardResultType draw_card_result_type = 3;
+}
+
+

@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package lettuce.battle_ai.common;
+
+import "lettuce/battle_ai/common/atomic_action.proto";
+import "lettuce/battle_engine/schema/player_id.proto";
+
+message AtomicActionInfo {
+  lettuce.battle_engine.schema.PlayerId player_id = 1;
+  AtomicAction atomic_action = 2;
+}
+
+

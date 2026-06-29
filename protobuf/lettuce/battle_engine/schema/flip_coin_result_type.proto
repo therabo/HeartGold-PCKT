@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+enum FlipCoinResultType {
+  FLIP_COIN_RESULT_TYPE_UNSPECIFIED = 0;
+  FLIP_COIN_RESULT_TYPE_HEAD = 1;
+  FLIP_COIN_RESULT_TYPE_TAIL = 2;
+}
+

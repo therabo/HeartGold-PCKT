@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/attach_energy_result_type.proto";
+
+message AttachEnergyResultTypeEnumUpdation {
+  AttachEnergyResultType value = 1;
+}
+
+

@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package lettuce.battle_ai.common;
+
+import "lettuce/battle_ai/common/battle_object_id_to_card_id.proto";
+import "lettuce/battle_engine/schema/action.proto";
+
+message ActionInfo {
+  lettuce.battle_engine.schema.Action action = 1;
+  int32 turn = 2;
+  repeated BattleObjectIdToCardId id_list = 3;
+}
+
+

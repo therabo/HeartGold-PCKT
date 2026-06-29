@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/pokemon_object.proto";
+
+message BenchPokemonObject {
+  PokemonObject pokemon = 1;
+}
+
+

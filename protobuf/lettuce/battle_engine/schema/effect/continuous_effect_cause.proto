@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema.effect;
+
+import "lettuce/battle_engine/schema/card_id.proto";
+import "lettuce/battle_engine/schema/logic_specifier.proto";
+
+message ContinuousEffectCause {
+  lettuce.battle_engine.schema.LogicSpecifier logic = 1;
+  lettuce.battle_engine.schema.CardId card = 2;
+}
+
+

@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/trainer_type.proto";
+
+message TrainerTypeEnumUpdation {
+  TrainerType value = 1;
+}
+
+

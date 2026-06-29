@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/battle_object_id.proto";
+import "lettuce/battle_engine/schema/card_id.proto";
+import "lettuce/battle_engine/schema/damage_amount.proto";
+import "lettuce/battle_engine/schema/player_id.proto";
+
+message ApplyAbilityEffectDamageCommandRequest {
+  PlayerId applier = 1;
+  CardId applier_card = 2;
+  repeated BattleObjectId targets = 3;
+  DamageAmount amount = 4;
+}
+
+

@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/continuous_effect_instance_id.proto";
+
+message PlayPokemonToBenchCommandResponse {
+  repeated ContinuousEffectInstanceId applied_effects = 1;
+}
+
+

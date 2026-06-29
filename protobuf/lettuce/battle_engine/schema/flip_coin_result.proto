@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package lettuce.battle_engine.schema;
+
+import "lettuce/battle_engine/schema/flip_coin_reservation.proto";
+import "lettuce/battle_engine/schema/flip_coin_result_type.proto";
+
+message FlipCoinResult {
+  repeated FlipCoinResultType values = 1;
+  FlipCoinReservation applied_reservation = 2;
+}
+
+
